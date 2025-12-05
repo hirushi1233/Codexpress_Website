@@ -248,6 +248,8 @@
             <div class="tech-item">C++</div>
             <div class="tech-item">JavaScript</div>
             <div class="tech-item">PHP</div>
+            <div class="tech-item">JavaScript</div>
+            <div class="tech-item">PHP</div>
         </div>
 
 
@@ -277,7 +279,7 @@
             <div class="review-card">
                 <div class="card-header">
                     <div class="company-logo">
-                        <div class="logo-placeholder">TechStart</div>
+                        <div class="logo-placeholder">Kasun Perera</div>
                     </div>
                     <div class="arrow-icon">→</div>
                 </div>
@@ -293,7 +295,7 @@
             <div class="review-card">
                 <div class="card-header">
                     <div class="company-logo">
-                        <div class="logo-placeholder">WILSON</div>
+                        <div class="logo-placeholder">Thilina Jayasinghe</div>
                     </div>
                     <div class="arrow-icon">→</div>
                 </div>
@@ -309,7 +311,7 @@
             <div class="review-card">
                 <div class="card-header">
                     <div class="company-logo">
-                        <div class="logo-placeholder">GreenTech</div>
+                        <div class="logo-placeholder">Priyanka Wijesinghe</div>
                     </div>
                     <div class="arrow-icon">→</div>
                 </div>
@@ -325,7 +327,7 @@
             <div class="review-card">
                 <div class="card-header">
                     <div class="company-logo">
-                        <div class="logo-placeholder">Bloom</div>
+                        <div class="logo-placeholder">Nimali Fernando</div>
                     </div>
                     <div class="arrow-icon">→</div>
                 </div>
