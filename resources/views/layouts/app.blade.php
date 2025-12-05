@@ -59,6 +59,62 @@
 
         observer.observe(aboutSection);
     });
+
+
+    let currentIndex = 0;
+    const track = document.getElementById('portfolioTrack');
+    const cards = document.querySelectorAll('.portfolio-card');
+    const totalCards = cards.length;
+
+    function getCardsPerView() {
+        if (window.innerWidth > 1200) return 3;
+        if (window.innerWidth > 768) return 2;
+        return 1;
+    }
+
+    function updateSlider() {
+        const cardsPerView = getCardsPerView();
+        const cardWidth = cards[0].offsetWidth;
+        const gap = window.innerWidth > 768 ? 40 : 20;
+        const offset = currentIndex * (cardWidth + gap);
+
+        track.style.transform = `translateX(-${offset}px)`;
+
+        // Update button states
+        const prevBtn = document.querySelector('.slider-btn.prev');
+        const nextBtn = document.querySelector('.slider-btn.next');
+
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex >= totalCards - cardsPerView;
+    }
+
+    function slideProjects(direction) {
+        const cardsPerView = getCardsPerView();
+        const maxIndex = totalCards - cardsPerView;
+
+        currentIndex += direction;
+
+        if (currentIndex < 0) {
+            currentIndex = 0;
+        } else if (currentIndex > maxIndex) {
+            currentIndex = maxIndex;
+        }
+
+        updateSlider();
+    }
+
+    // Initialize
+    window.addEventListener('load', updateSlider);
+
+    // Handle window resize
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            currentIndex = 0;
+            updateSlider();
+        }, 100);
+    });
 </script>
 
 </body>
