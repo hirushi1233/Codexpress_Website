@@ -3,7 +3,7 @@
 @section('title', 'CodeXpress - Home')
 
 @section('content')
-    <!-- main banner part -->
+    <!-- main banner part
     <div class="main-banner" id="top">
         <div class="container">
             <div class="row">
@@ -24,7 +24,7 @@
                                         </div>
                                     </div>
 
-                                    <!-- Running Text Component -->
+                                     Running Text Component
                                     <div class="running-text-container">
                                         <div class="running-text-wrapper">
                                             <div class="running-text">
@@ -60,7 +60,7 @@
                                         </div>
                                     </div>
 
-                                    <!-- Running Text Component -->
+                                     Running Text Component
                                     <div class="running-text-container">
                                         <div class="running-text-wrapper">
                                             <div class="running-text">
@@ -96,7 +96,7 @@
                                         </div>
                                     </div>
 
-                                    <!-- Running Text Component -->
+                                    Running Text Component
                                     <div class="running-text-container">
                                         <div class="running-text-wrapper">
                                             <div class="running-text">
@@ -125,9 +125,25 @@
             </div>
         </div>
     </div>
+-->
+
+    <section class="spotlight-section">
+        <div class="spotlight-background"></div>
+
+        <div class="spotlight-container">
+            <div class="spotlight-content">
+                <h1>
+                    Empower Your Business With High-Quality Digital Solutions. <span class="highlight"> </span>
+                </h1>
+                <!-- <p>
+                    Access 4,000+ timezone-aligned software engineers with experience in AI and 100+ other technologies.
+                </p>
+                <button class="cta-button">Schedule a Call</button> -->
+            </div>
+        </div>
 
 
-
+    </section>
 
 
 
@@ -340,6 +356,7 @@
             </div>
         </div>
     </div>
+
 
 
 
@@ -561,6 +578,7 @@
 
 
 
+
     <div id="contact" class="contact-us section">
         <div class="container">
             <div class="row">
@@ -609,6 +627,8 @@
                 </div>
             </div>
         </div>
+
+
 <br>
         <br>
         <section class="cta-section">
@@ -628,6 +648,12 @@
             </div>
         </div>
         </section>
+
+        <br>
+        <br>
+
+
+
 
         <!-- <div class="contact-dec">
             <img src="assets/images/contact-dec.png" alt="">

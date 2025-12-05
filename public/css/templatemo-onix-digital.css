@@ -1089,8 +1089,9 @@ body {
     }
 }
 
-<!-- our services -->
 
+<!-- home page -->
+/* HOME PAGE - SPOTLIGHT SECTION */
 * {
     margin: 0;
     padding: 0;
@@ -1099,10 +1100,172 @@ body {
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.spotlight-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, #ffffff 0%, #ffffff 50%, rgba(255,255,255,0.95) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.spotlight-background {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 55%;
+    height: 100%;
+    background: url('../assets/images/office-team.jpg') center/cover no-repeat;
+    z-index: 0;
+}
+
+.spotlight-background::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background: linear-gradient(to right, #ffffff, transparent);
+}
+
+.spotlight-container {
+    padding: 80px 60px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.spotlight-content {
+    max-width: 650px;
+    margin-left: 0;
+}
+
+.spotlight-content h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.spotlight-content h1 .highlight {
+    color: #ff6b35;
+}
+
+.spotlight-content p {
+    font-size: 1.25rem;
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #ff6b35;
+    color: #ffffff;
+    padding: 18px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background: #e55a28;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
+}
+
+.logo-section {
+    position: absolute;
+    bottom: 60px;
+    left: 60px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    z-index: 1;
+}
+
+.logo-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.logo-item:hover {
+    opacity: 1;
+}
+
+.logo-icon {
+    font-size: 2rem;
+    color: #666;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #666;
+}
+
+@media (max-width: 1024px) {
+    .spotlight-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .spotlight-background {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .spotlight-section {
+        min-height: auto;
+    }
+
+    .spotlight-container {
+        padding: 60px 30px 120px;
+    }
+
+    .spotlight-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .spotlight-content p {
+        font-size: 1.1rem;
+    }
+
+    .spotlight-background {
+        width: 100%;
+        opacity: 0.15;
+    }
+
+    .logo-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        left: 30px;
+        bottom: 30px;
+    }
+
+    .logo-item {
+        font-size: 0.9rem;
+    }
+}
+
+/* OUR SERVICES SECTION */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     background: #f5f5f5;
 }
 
-/* SERVICES SECTION */
 .services-section {
     max-width: 1400px;
     margin: 0 auto;
@@ -1217,6 +1380,7 @@ body {
 .service-card p a:hover {
     border-bottom-width: 2px;
 }
+
 
 /* TECH STACK SECTION */
 .tech-stack-section {
@@ -1349,6 +1513,8 @@ body {
 
 
 /* client review section */
+
+
 * {
     margin: 0;
     padding: 0;
@@ -1391,7 +1557,7 @@ body {
 }
 
 .hero-text h1 {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     color: #2d2d2d;
     font-weight: 600;
     line-height: 1.2;
@@ -1918,8 +2084,13 @@ Subscribe
 }
 
 
+/*
+---------------------------------------------
+ cta section
+---------------------------------------------
+*/
 
-/* cta section */
+
 
 
  * {
@@ -2166,12 +2337,11 @@ form#contact button:hover {
 }
 
 
-/* ---------------------------------------------
-Footer Style - Dark Orange with Subtle White Highlights
---------------------------------------------- */
+
 /* ---------------------------------------------
 Footer Style - 3 Vertical Sections: Orange | White | Sky Blue
 --------------------------------------------- */
+
 footer {
     background: linear-gradient(to right,
     #ff7a3c 0%,   /* left orange */
