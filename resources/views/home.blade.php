@@ -24,7 +24,7 @@
                                         </div>
                                     </div>
 
-                                     Running Text Component
+                                    Running Text Component
                                     <div class="running-text-container">
                                         <div class="running-text-wrapper">
                                             <div class="running-text">
@@ -96,7 +96,7 @@
                                         </div>
                                     </div>
 
-                                    Running Text Component
+                                     Running Text Component
                                     <div class="running-text-container">
                                         <div class="running-text-wrapper">
                                             <div class="running-text">
@@ -127,34 +127,179 @@
     </div>
 -->
 
+
     <section class="spotlight-section">
         <div class="spotlight-background"></div>
 
         <div class="spotlight-container">
             <div class="spotlight-content">
-                <h1>
-                    Empower Your Business With High-Quality Digital Solutions. <span class="highlight"> </span>
-                </h1>
-                <!-- <p>
-                    Access 4,000+ timezone-aligned software engineers with experience in AI and 100+ other technologies.
-                </p>
-                <button class="cta-button">Schedule a Call</button> -->
+                <div class="owl-carousel owl-banner">
+                    <!-- Slide 1
+                    <div class="item header-text">
+                        <h6>Welcome to Your Business</h6>
+                        <h1>
+                            Empower Your Business With <em>High-Quality</em> <span class="highlight">Digital Solutions</span>
+                        </h1>
+                        <p>
+                            Access 4,000+ timezone-aligned software engineers with experience in AI and 100+ other technologies.
+                        </p>
+                        <div class="down-buttons">
+                            <div class="main-blue-button-hover">
+                                <button class="cta-button">Schedule a Call</button>
+                            </div>
+                            <br>
+                            <div class="call-button">
+                                <a href="#"><i class="fa fa-phone"></i> 010-020-0340</a>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- Slide 2 -->
+                    <div class="item header-text">
+                        <h6>Expert Development</h6>
+                        <h1>
+                            Transform Your Ideas Into <em>Scalable</em> <span class="highlight">Solutions</span>
+                        </h1>
+                        <p>
+                            Our experienced team delivers cutting-edge technology solutions tailored to your business needs.
+                        </p>
+                        <div class="down-buttons">
+                            <div class="main-blue-button-hover">
+                                <button class="cta-button">View Our Work</button>
+                            </div>
+                            <br>
+                            <div class="call-button">
+                                <a href="#"><i class="fa fa-phone"></i> 0777674308</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="item header-text">
+                        <h6>Innovation First</h6>
+                        <h1>
+                            An   <em>Innovative</em> IT <span class="highlight">Solutions </span> Agency
+                        </h1>
+                        <p>
+                            At CodeXpress, we deliver innovative IT solutions customized for your business. From web and mobile development to cloud services and IT consulting, our expert team ensures quality, efficiency, and long-term support.
+                        </p>
+                        <div class="down-buttons">
+                            <div class="main-blue-button-hover">
+                                <button class="cta-button">Get Started</button>
+                            </div>
+                            <br>
+                            <div class="call-button">
+                                <a href="#"><i class="fa fa-phone"></i> 0777674308</a>
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
             </div>
         </div>
-
-
     </section>
 
+<br>
+    <!--testimonial about section-->
+    <section class="testimonials-section" id="awards">
+        <div class="container">
 
+            <!-- Section Header -->
+            <div class="section-header">
+                <div class="section-label">OUR JOURNEY</div>
+                <h2 class="section-title">
+                    Excellence.<br>
+                    <span class="highlight">Our standard for client delivery.</span>
+                </h2>
+               <!-- <p class="section-description">
+                    Over 130+ awards, accolades, and industry recognitions showcase our commitment to
+                    delivering world-class technology solutions with consistency, quality, and innovation.
+                </p>-->
+            </div>
+
+            <!-- Grid Layout -->
+            <div class="testimonials-grid">
+
+                <!-- Left Stats Column -->
+                <div class="stats-column">
+
+                    <!-- Stat 1 -->
+                    <div class="stat-card">
+                        <div class="stat-circle">
+                            <svg class="circular-text" viewBox="0 0 200 200" width="220" height="220">
+                                <defs>
+                                    <path id="circle-path" d="M 100, 100 m -90, 0 a 90,90 0 1,1 180,0 a 90,90 0 1,1 -180,0"/>
+                                </defs>
+                                <text class="rotating-text">
+                                    <textPath href="#circle-path">
+                                        OUR PROJECTS • OUR PROJECTS • OUR PROJECTS • OUR PROJECTS
+                                    </textPath>
+                                </text>
+                            </svg>
+                            <div class="stat-number">25000+</div>
+                            <div class="stat-label">projects delivered</div>
+                        </div>
+                        <div class="stat-description">projects executed successfully</div>
+                    </div>
+
+                    <!-- Stat 2 -->
+                    <div class="stat-card">
+                        <div class="stat-circle">
+                            <svg class="circular-text" viewBox="0 0 200 200" width="220" height="220">
+                                <defs>
+                                    <path id="circle-path-2" d="M 100, 100 m -90, 0 a 90,90 0 1,1 180,0 a 90,90 0 1,1 -180,0"/>
+                                </defs>
+                                <text class="rotating-text">
+                                    <textPath href="#circle-path-2">
+                                        HAPPY STUDENTS •  HAPPY STUDENTS •  HAPPY STUDENTS •
+                                    </textPath>
+                                </text>
+                            </svg>
+                            <div class="stat-number">120+</div>
+                            <div class="stat-label">Happy Students</div>
+                        </div>
+                        <div class="stat-description">total happy studets</div>
+                    </div>
+                </div>
+
+                <!-- Right About Content -->
+                <div class="awards-column">
+                    <div class="about-content">
+                        <p class="about-text">
+                            Founded in 2020, codeXpress is a forward-thinking IT solutions agency based in Sri Lanka,
+                            offering a wide range of services including web development, POS systems, ERP solutions,
+                            and digital media services. Our goal is to help businesses go digital with smart, scalable,
+                            and user-friendly technology.
+                        </p>
+                        <p class="about-text">
+                            With over 5 years of experience and a passion for innovation, we've helped many clients
+                            streamline their operations and grow online. Our commitment to quality, support, and
+                            continuous learning makes us a trusted tech partner for businesses of all sizes.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CTA Link
+                <a href="#" class="cta-link">View all our achievements</a> -->
+
+            </div>
+        </div>
+    </section>
+
+<br>
 
     <!-- our servces part  02 -->
     <div class="services-section">
         <div class="section-header">
-            <h1>From Concept to Completion:<br>Our Full-Stack Expertise.<span class="highlight"></span></h1>
-            <a href="#" class="cta-link">
+            <h1>Full-Stack Solutions for Every <br>Stage of Your Vision.<span class="highlight"></span></h1>
+          <!--  <a href="#" class="cta-link">
                 Everything we do
                 <span>→</span>
-            </a>
+            </a> -->
         </div>
 
         <div class="services-grid">
@@ -249,7 +394,7 @@
     <div class="tech-stack-section">
         <div class="section-header">
             <h1>Yes. We cover your tech stack<span class="highlight">.</span></h1>
-            <p>Our 4,000+ team has expertise in almost every<br>programming language.</p>
+            <p>Our 1,000+ team has expertise in almost every<br>programming language.</p>
         </div>
 
         <div class="tech-grid">
@@ -281,7 +426,7 @@
             </div>
 
             <div class="hero-text">
-                <h1>We've stopped counting. Over 500 brands count on us.</h1>
+                <h1>“Our success is measured by client satisfaction — and their reviews prove it.”</h1>
                 <p>1,200+ projects executed successfully and an average relationship of over 3 years.</p>
                 <a href="#" class="cta-link">
                     Our greatest hits
@@ -302,7 +447,7 @@
                 <div class="quote-mark">"</div>
                 <p class="review-text">CodeXpress delivered exactly what we needed. Their web design skills are top-notch and they completed our project on time.</p>
                 <div class="client-info">
-                    <div class="client-name">Kasun Perera</div>
+                   <!-- <div class="client-name">Kasun Perera</div>-->
                     <div class="client-title">CEO, TechStart Solutions</div>
                 </div>
             </div>
@@ -318,7 +463,7 @@
                 <div class="quote-mark">"</div>
                 <p class="review-text">Excellent work from CodeXpress web solutions. They understood our requirements and delivered a modern, responsive website.</p>
                 <div class="client-info">
-                    <div class="client-name">Thilina Jayasinghe</div>
+                   <!-- <div class="client-name">Thilina Jayasinghe</div>-->
                     <div class="client-title">Founder, Wilson Enterprises</div>
                 </div>
             </div>
@@ -334,7 +479,7 @@
                 <div class="quote-mark">"</div>
                 <p class="review-text">Very satisfied with CodeXpress's web design services. They were responsive, creative, and delivered quality work within budget.</p>
                 <div class="client-info">
-                    <div class="client-name">Priyanka Wijesinghe</div>
+                   <!-- <div class="client-name">Priyanka Wijesinghe</div>-->
                     <div class="client-title">Manager, GreenTech Labs</div>
                 </div>
             </div>
@@ -350,7 +495,7 @@
                 <div class="quote-mark">"</div>
                 <p class="review-text">Professional service and great communication throughout. CodeXpress created a beautiful website that perfectly represents our brand.</p>
                 <div class="client-info">
-                    <div class="client-name">Nimali Fernando</div>
+                   <!-- <div class="client-name">Nimali Fernando</div>-->
                     <div class="client-title">Marketing Director, Bloom & Co</div>
                 </div>
             </div>
@@ -359,100 +504,6 @@
 
 
 
-
-    <!--testimonial about section-->
-    <section class="testimonials-section" id="awards">
-        <div class="container">
-
-            <!-- Section Header -->
-            <div class="section-header">
-                <div class="section-label">OUR AWARDS</div>
-                <h2 class="section-title">
-                    Excellence.<br>
-                    <span class="highlight">Our standard for client delivery.</span>
-                </h2>
-                <p class="section-description">
-                    Over 130+ awards, accolades, and industry recognitions showcase our commitment to
-                    delivering world-class technology solutions with consistency, quality, and innovation.
-                </p>
-            </div>
-
-            <!-- Grid Layout -->
-            <div class="testimonials-grid">
-
-                <!-- Left Stats Column -->
-                <div class="stats-column">
-
-                    <!-- Stat 1 -->
-                    <div class="stat-card">
-                        <div class="stat-circle">
-                            <div class="stat-number">1,250+</div>
-                            <div class="stat-label">projects delivered</div>
-                        </div>
-                        <div class="stat-description">projects executed successfully</div>
-                    </div>
-
-                    <!-- Stat 2 -->
-                    <div class="stat-card">
-                        <div class="stat-circle">
-                            <div class="stat-number">130+</div>
-                            <div class="stat-label">industry sectors</div>
-                        </div>
-                        <div class="stat-description">industry categories worldwide</div>
-                    </div>
-                </div>
-
-                <!-- Right Awards Grid -->
-                <div class="awards-column">
-
-                    <div class="award-card">
-                        <h4 class="client-name">Kasun Perera</h4>
-                        <div class="client-title">CEO, TechStart Solutions</div>
-                        <div class="stars">★★★★☆</div>
-                        <p class="testimonial-text">
-                            CodeXpress delivered exactly what we needed. Their web design skills are top-notch
-                            and they completed our project on time.
-                        </p>
-                    </div>
-
-                    <div class="award-card">
-                        <h4 class="client-name">Thilina Jayasinghe</h4>
-                        <div class="client-title">Founder, Wilson Enterprises</div>
-                        <div class="stars">★★★★☆</div>
-                        <p class="testimonial-text">
-                            Excellent work from CodeXpress web solutions. They understood our requirements and
-                            delivered a modern, responsive website.
-                        </p>
-                    </div>
-
-                    <div class="award-card">
-                        <h4 class="client-name">Priyanka Wijesinghe</h4>
-                        <div class="client-title">Manager, GreenTech Labs</div>
-                        <div class="stars">★★★★☆</div>
-                        <p class="testimonial-text">
-                            Very satisfied with CodeXpress's web design services. They were responsive, creative,
-                            and delivered quality work within budget.
-                        </p>
-                    </div>
-
-                    <div class="award-card">
-                        <h4 class="client-name">Nimali Fernando</h4>
-                        <div class="client-title">Marketing Director, Bloom & Co</div>
-                        <div class="stars">★★★★☆</div>
-                        <p class="testimonial-text">
-                            Professional service and great communication throughout. CodeXpress created a beautiful
-                            website that perfectly represents our brand.
-                        </p>
-                    </div>
-
-                </div>
-
-                <!-- CTA Link -->
-            <a href="#" class="cta-link">View all our achievements</a>
-
-        </div>
-        </div>
-    </section>
 
     <!-- portolio section -->
     <div id="portfolio" class="our-portfolio section">
@@ -553,26 +604,6 @@
 
 
 
-    <div id="subscribe" class="subscribe">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="inner-content">
-                        <div class="row">
-                            <div class="col-lg-10 offset-lg-1">
-                                <h2>Know Your Website SEO Score by Email</h2>
-                                <form id="subscribe" action="" method="get">
-                                    <input type="text" name="website" id="website" placeholder="Your Website URL" required="">
-                                    <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="">
-                                    <button type="submit" id="form-submit" class="main-button ">Subscribe</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
 
@@ -627,8 +658,6 @@
                 </div>
             </div>
         </div>
-
-
 <br>
         <br>
         <section class="cta-section">
@@ -648,12 +677,6 @@
             </div>
         </div>
         </section>
-
-        <br>
-        <br>
-
-
-
 
         <!-- <div class="contact-dec">
             <img src="assets/images/contact-dec.png" alt="">

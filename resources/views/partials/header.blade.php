@@ -36,7 +36,7 @@
                                             </ul>
 
                                             <div class="sidebar-case-study">
-                                                <img src="assets/images/rolls-royce-logo.png" alt="Client Logo" style="width: 120px; margin-bottom: 10px;">
+                                               <!-- <img src="assets/images/rolls-royce-logo.png" alt="Client Logo" style="width: 120px; margin-bottom: 10px;"> -->
                                                 <p>We built an app for real-time nuclear plant monitoring. <a href="#case-study">Read case study.</a></p>
                                             </div>
                                         </div>
@@ -47,14 +47,16 @@
                                             <div class="mega-column">
                                                 <h4><span class="bullet">●</span> TOP SOLUTIONS</h4>
                                                 <ul>
-                                                    <li><a href="#ai-development">AI Development</a></li>
+                                                  <!--  <li><a href="#ai-development">AI Development</a></li> -->
                                                     <li><a href="#backend-development">Back-end Development</a></li>
-                                                    <li><a href="#cms-development">CMS Development</a></li>
-                                                    <li><a href="#cryptocurrency">Cryptocurrency & Blockchain</a></li>
+                                                   <!-- <li><a href="#cms-development">CMS Development</a></li>
+                                                    <li><a href="#cryptocurrency">Cryptocurrency & Blockchain</a></li> -->
                                                     <li><a href="#frontend-development">Front-end Development</a></li>
-                                                    <li><a href="#machine-learning">Machine Learning</a></li>
-                                                    <li><a href="#qa-testing">QA Testing & Automation</a></li>
+                                                  <!--  <li><a href="#machine-learning">Machine Learning</a></li>
+                                                    <li><a href="#qa-testing">QA Testing & Automation</a></li> -->
                                                     <li><a href="#ux-ui-design">UX/UI Design</a></li>
+                                                    <li><a href="#android-development">Android App Development</a></li>
+                                                    <li><a href="#business-intelligence">Business Intelligence</a></li>
                                                 </ul>
                                             </div>
 
@@ -62,11 +64,11 @@
                                             <div class="mega-column">
                                                 <h4>&nbsp;</h4>
                                                 <ul>
-                                                    <li><a href="#android-development">Android App Development</a></li>
-                                                    <li><a href="#business-intelligence">Business Intelligence</a></li>
-                                                    <li><a href="#data-engineering">Data Engineering</a></li>
+
+
+                                                   <!-- <li><a href="#data-engineering">Data Engineering</a></li> -->
                                                     <li><a href="#ecommerce-development">eCommerce Development</a></li>
-                                                    <li><a href="#ios-development">iOS App Development</a></li>
+                                                    <!--<li><a href="#ios-development">iOS App Development</a></li> -->
                                                     <li><a href="#mobile-development">Mobile App Development</a></li>
                                                     <li><a href="#saas-development">SaaS Development</a></li>
                                                     <li><a href="#web-development">Web Development</a></li>
@@ -78,11 +80,11 @@
                                                 <h4><span class="bullet">●</span> ENTERPRISE FOCUSED</h4>
                                                 <ul>
                                                     <li><a href="#backup-solutions">Backup Solutions</a></li>
-                                                    <li><a href="#big-data">Big Data</a></li>
+                                                   <!-- <li><a href="#big-data">Big Data</a></li>
                                                     <li><a href="#cloud-applications">Cloud Applications</a></li>
                                                     <li><a href="#crm-systems">CRM Systems</a></li>
                                                     <li><a href="#cybersecurity">Cybersecurity</a></li>
-                                                    <li><a href="#devops">DevOps</a></li>
+                                                    <li><a href="#devops">DevOps</a></li> -->
                                                     <li><a href="#digital-transformation">Digital Transformation</a></li>
                                                     <li><a href="#erp-development">ERP Development</a></li>
                                                 </ul>
@@ -114,7 +116,7 @@
                                             </ul>
 
                                             <div class="sidebar-case-study">
-                                                <img src="assets/images/urban-outfitters-logo.png" alt="Urban Outfitters" style="width: 140px; margin-bottom: 10px;">
+                                                <!--<img src="assets/images/urban-outfitters-logo.png" alt="Urban Outfitters" style="width: 140px; margin-bottom: 10px;"-->
                                                 <p>We optimized website performance, leading to 38% increase in net profits. <a href="#case-study">Read case study.</a></p>
                                             </div>
                                         </div>
@@ -177,19 +179,82 @@
                         </li>
 
                         <!-- Industries Dropdown -->
-                        <li class="scroll-to-section has-dropdown">
-                            <a href="#industries" style="color: #1a1a1a; font-weight: 700;">Industires <i class="fa fa-angle-down"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#healthcare">Healthcare</a></li>
-                                <li><a href="#finance">Finance</a></li>
-                                <li><a href="#ecommerce">E-commerce</a></li>
-                                <li><a href="#education">Education</a></li>
-                                <li><a href="#manufacturing">Manufacturing</a></li>
-                            </ul>
+                        <!-- Industries Mega Dropdown -->
+                        <li class="scroll-to-section has-mega-dropdown">
+                            <a href="#industries" style="color: #1a1a1a; font-weight: 700;">Industries <i class="fa fa-angle-down"></i></a>
+
+                            <div class="mega-dropdown-menu">
+                                <div class="mega-dropdown-container">
+                                    <div class="mega-dropdown-content">
+                                        <!-- Left Sidebar -->
+                                        <div class="mega-sidebar">
+                                            <h3>Industries.</h3>
+                                            <p>Tailored solutions for your industry. Deep expertise in diverse sectors.</p>
+                                            <ul class="sidebar-links">
+                                                <li><a href="#industry-expertise">Industry Expertise</a></li>
+                                                <li><a href="#case-studies">Success Stories</a></li>
+                                                <li><a href="#custom-solutions">Custom Solutions</a></li>
+                                            </ul>
+
+                                            <div class="sidebar-case-study">
+                                                <p>We helped a healthcare provider reduce patient wait times by 45% through digital transformation. <a href="#case-study">Read case study.</a></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Main Content Columns -->
+                                        <div class="mega-columns">
+                                            <!-- Column 1 -->
+                                            <div class="mega-column">
+                                                <h4><span class="bullet">●</span> PRIMARY INDUSTRIES</h4>
+                                                <ul>
+                                                    <li><a href="#healthcare">Healthcare & Medical</a></li>
+                                                    <li><a href="#finance">Finance & Banking</a></li>
+                                                    <li><a href="#ecommerce">E-commerce & Retail</a></li>
+                                                    <li><a href="#education">Education & E-Learning</a></li>
+                                                    <li><a href="#manufacturing">Manufacturing</a></li>
+                                                    <li><a href="#logistics">Logistics & Supply Chain</a></li>
+                                                </ul>
+                                            </div>
+
+                                            <!-- Column 2 -->
+                                            <div class="mega-column">
+                                                <h4><span class="bullet">●</span> TECH & SERVICES</h4>
+                                                <ul>
+                                                    <li><a href="#saas">SaaS & Software</a></li>
+                                                    <li><a href="#fintech">FinTech</a></li>
+                                                    <li><a href="#real-estate">Real Estate & PropTech</a></li>
+                                                    <li><a href="#media">Media & Entertainment</a></li>
+                                                    <li><a href="#telecom">Telecommunications</a></li>
+                                                    <li><a href="#travel">Travel & Hospitality</a></li>
+                                                </ul>
+                                            </div>
+
+                                            <!-- Column 3 -->
+                                            <div class="mega-column">
+                                                <h4><span class="bullet">●</span> EMERGING SECTORS</h4>
+                                                <ul>
+                                                    <li><a href="#energy">Energy & Utilities</a></li>
+                                                    <li><a href="#automotive">Automotive & Mobility</a></li>
+                                                    <li><a href="#insurance">Insurance & InsurTech</a></li>
+                                                    <li><a href="#agriculture">Agriculture & AgriTech</a></li>
+                                                    <li><a href="#government">Government & Public Sector</a></li>
+                                                    <li><a href="#nonprofit">Non-Profit Organizations</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- View All Link -->
+                                    <div class="mega-footer">
+                                        <a href="#all-industries" class="view-all-link">All Industries →</a>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
 
-                        <li class="scroll-to-section"><a href="#about" style="color: #1a1a1a; font-weight: 700;">About</a></li>
+                        <li class="scroll-to-section"><a href="#about" style="color: #1a1a1a; font-weight: 700;">Careers</a></li>
                         <li class="scroll-to-section"><a href="#work" style="color: #1a1a1a; font-weight: 700;">Our Work</a></li>
+                        <li class="scroll-to-section"><a href="#course" style="color: #1a1a1a; font-weight: 700;">Courses</a></li>
 
 
                         <li class="scroll-to-section"><div class="main-red-button-hover"><a href="#contact">Schedule a Call</a></div></li>
