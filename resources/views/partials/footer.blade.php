@@ -59,7 +59,7 @@
         }
 
         .footer-column ul li a:hover {
-            color: #ff6b35;
+            color: #00ffcc;
         }
 
         .logo-column {
@@ -117,14 +117,14 @@
         }
 
         .btn-primary {
-            background: #ff6b35;
+            background: #00ffcc;
             color: white;
-            border: 2px solid #ff6b35;
+            border: 2px solid #00ffcc;
         }
 
         .btn-primary:hover {
-            background: #ff5722;
-            border-color: #ff5722;
+            background: #00ffcc;
+            border-color:#00ffcc;
         }
 
         .btn-primary::after {

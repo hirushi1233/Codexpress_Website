@@ -8,16 +8,20 @@
                 <!--    <a href="index.html" class="logo">
                         <img src="assets/images/lg.png" style="width:150px; height:auto;">
                     </a> --><a href="index.html" class="logo" style="font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 700; text-decoration: none;">
-                        <span style="color: #ff4d00;">Code</span>
-                        <span style="color: #1a1a1a;">
+                        <span style="color: #00ffcc; ">Code</span>
+                        <span style="color: #000000 ; font-weight: 900;">
         <span style="font-size: 36px;">X</span>press
     </span>
                     </a>
 
 
+
+
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
+
+                        <li class="scroll-to-section"><a href="/" style="color: #1a1a1a; font-weight: 700;">Home</a></li>
                         <!-- Solutions Mega Dropdown -->
                         <li class="scroll-to-section has-mega-dropdown">
                             <a href="#solutions" style="color: #1a1a1a; font-weight: 700;">Solutions <i class="fa fa-angle-down"></i></a>
@@ -102,7 +106,10 @@
 
                         <!-- Technologies Mega Dropdown -->
                         <li class="scroll-to-section has-mega-dropdown">
-                            <a href="#technologies" style="color: #1a1a1a; font-weight: 700;">Technologies<i class="fa fa-angle-down"></i></a>
+                            <a href="{{ route('technology') }}" style="color: #1a1a1a; font-weight: 700;">
+                                Technologies
+                                <i class="fa fa-angle-down" onclick="event.preventDefault(); event.stopPropagation();"></i>
+                            </a>
                             <div class="mega-dropdown-menu">
                                 <div class="mega-dropdown-container">
                                     <div class="mega-dropdown-content">
@@ -252,10 +259,14 @@
                             </div>
                         </li>
 
-                        <li class="scroll-to-section"><a href="#about" style="color: #1a1a1a; font-weight: 700;">Careers</a></li>
-                        <li class="scroll-to-section"><a href="#work" style="color: #1a1a1a; font-weight: 700;">Our Work</a></li>
-                        <li class="scroll-to-section"><a href="#course" style="color: #1a1a1a; font-weight: 700;">Courses</a></li>
+                        <li class="scroll-to-section">
+                            <a href="{{ route('careers') }}" style="color: #1a1a1a; font-weight: 700;">Careers</a>
+                        </li>
 
+
+                        <li class="scroll-to-section">
+                            <a href="{{ route('courses') }}" style="color: #1a1a1a; font-weight: 700;">Courses</a>
+                        </li>
 
                         <li class="scroll-to-section"><div class="main-red-button-hover"><a href="#contact">Schedule a Call</a></div></li>
                     </ul>
@@ -334,7 +345,7 @@
 
     .dropdown-menu li a:hover {
         background: #f8f9fa;
-        color: #ff3600;
+        color: #00ffcc;
         padding-left: 25px;
     }
 
@@ -397,7 +408,7 @@
     }
 
     .mega-sidebar p a {
-        color: #ff3600;
+        color: #00ffcc;
         text-decoration: underline;
     }
 
@@ -420,7 +431,7 @@
     }
 
     .sidebar-links li a:hover {
-        color: #ff3600;
+        color: #00ffcc;
     }
 
     .sidebar-case-study {
@@ -436,7 +447,7 @@
     }
 
     .sidebar-case-study a {
-        color: #ff3600;
+        color: #00ffcc;
         text-decoration: underline;
     }
 
@@ -463,7 +474,7 @@
     }
 
     .mega-column h4 .bullet {
-        color: #ff3600;
+        color: #00ffcc;
         margin-right: 8px;
         font-size: 8px;
     }
@@ -488,7 +499,7 @@
     }
 
     .mega-column ul li a:hover {
-        color: #ff3600;
+        color: #00ffcc;
         transform: translateX(5px);
     }
 
@@ -500,7 +511,7 @@
     }
 
     .view-all-link {
-        color: #ff3600;
+        color: #00ffcc;
         font-weight: 600;
         font-size: 15px;
         text-decoration: none;
@@ -508,7 +519,7 @@
     }
 
     .view-all-link:hover {
-        color: #cc2b00;
+        color: #00ccaa;
     }
 
     /* Mobile Responsive */
@@ -577,7 +588,6 @@
         }
     }
 </style>
-
 <script>
     // Mobile dropdown toggle
     document.addEventListener('DOMContentLoaded', function() {
