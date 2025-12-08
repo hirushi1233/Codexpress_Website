@@ -252,13 +252,16 @@
             border-top: 1px solid #e5e7eb;
             padding: 25px 0;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;   /* stack text + links */
+            justify-content: center;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
+            text-align: center;
+            gap: 12px;
             font-size: 13px;
             color: #6b7280;
+            width: 100%;
         }
+
 
         .footer-bottom-links {
             display: flex;
@@ -309,6 +312,7 @@
             .footer-bottom-links {
                 flex-direction: column;
                 gap: 10px;
+
             }
         }
     </style>

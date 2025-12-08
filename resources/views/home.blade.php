@@ -390,37 +390,52 @@
 
 <br>
     <br>
+    <br>
 
 
 
     <!-- tech stack -->
+
     <div class="tech-stack-section">
         <div class="section-header">
             <h1>Yes. We cover your tech stack<span class="highlight">.</span></h1>
             <p>Our 1,000+ team has expertise in almost every<br>programming language.</p>
         </div>
 
-        <div class="tech-grid">
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <!-- First set of items -->
+                <div class="tech-item">React</div>
+                <div class="tech-item">JavaScript</div>
+                <div class="tech-item">TypeScript</div>
+                <div class="tech-item">Node.js</div>
+                <div class="tech-item">Python</div>
+                <div class="tech-item">Docker</div>
+                <div class="tech-item">Kubernetes</div>
+                <div class="tech-item">AWS</div>
+                <div class="tech-item">MongoDB</div>
+                <div class="tech-item">PostgreSQL</div>
+                <div class="tech-item">Vue.js</div>
+                <div class="tech-item">Angular</div>
 
-            <div class="tech-item ">Node.js</div>
-            <div class="tech-item">Java</div>
-            <div class="tech-item">React</div>
-            <div class="tech-item">.NET</div>
-            <div class="tech-item">Android</div>
-            <div class="tech-item">iOS</div>
-            <div class="tech-item">Vue.js</div>
-            <div class="tech-item">C++</div>
-            <div class="tech-item">JavaScript</div>
-            <div class="tech-item">PHP</div>
-            <div class="tech-item">JavaScript</div>
-            <div class="tech-item">PHP</div>
+                <!-- Duplicated set for seamless loop -->
+                <div class="tech-item">React</div>
+                <div class="tech-item">JavaScript</div>
+                <div class="tech-item">TypeScript</div>
+                <div class="tech-item">Node.js</div>
+                <div class="tech-item">Python</div>
+                <div class="tech-item">Docker</div>
+                <div class="tech-item">Kubernetes</div>
+                <div class="tech-item">AWS</div>
+                <div class="tech-item">MongoDB</div>
+                <div class="tech-item">PostgreSQL</div>
+                <div class="tech-item">Vue.js</div>
+                <div class="tech-item">Angular</div>
+            </div>
         </div>
-
 
     </div>
 
-<br>
-    <br>
 
     <!--client review -->
     <div class="client-reviews-section">
@@ -505,6 +520,7 @@
             </div>
         </div>
     </div>
+
 
 
 
@@ -681,6 +697,9 @@
             </div>
         </div>
         </section>
+
+        <br>
+        <br>
 
         <!-- <div class="contact-dec">
             <img src="assets/images/contact-dec.png" alt="">
