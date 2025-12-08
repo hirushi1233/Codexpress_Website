@@ -413,7 +413,7 @@
             <ul class="footer-bottom-links">
                 <li><a href="#">Privacy Policy</a></li>
                 <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">Do Not Sell My Personal Information</a></li>
+              <!--  <li><a href="#">Do Not Sell My Personal Information</a></li> -->
             </ul>
         </div>
     </div>

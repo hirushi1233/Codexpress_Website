@@ -126,7 +126,7 @@
         </div>
     </div>
 -->
-<!--Home-->
+
 
     <section class="spotlight-section">
         <div class="spotlight-background"></div>
@@ -134,7 +134,8 @@
         <div class="spotlight-container">
             <div class="spotlight-content">
                 <div class="owl-carousel owl-banner">
-                    <!-- Slide 1-->
+                    <!--
+                     Slide 1
                     <div class="item header-text">
                         <h6>Welcome to Your Business</h6>
                         <h1>
@@ -153,6 +154,7 @@
                             </div>
                         </div>
                     </div> -->
+    <!--home -->
 
                     <!-- Slide 3 -->
                     <div class="item header-text">
@@ -216,7 +218,7 @@
                     delivering world-class technology solutions with consistency, quality, and innovation.
                 </p>-->
             </div>
-
+<br>
             <!-- Grid Layout -->
             <div class="testimonials-grid">
 
@@ -239,6 +241,8 @@
                             <div class="stat-number">25000+</div>
                             <div class="stat-label">projects delivered</div>
                         </div>
+                        <br>
+                        <br>
                         <div class="stat-description">projects executed successfully</div>
                     </div>
 
@@ -258,7 +262,9 @@
                             <div class="stat-number">120+</div>
                             <div class="stat-label">Happy Students</div>
                         </div>
-                        <div class="stat-description">total happy studets</div>
+                        <br>
+                        <br>
+                        <div class="stat-description">total happy students</div>
                     </div>
                 </div>
 

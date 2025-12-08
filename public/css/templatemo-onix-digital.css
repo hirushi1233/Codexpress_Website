@@ -603,7 +603,7 @@ preloader
 
 
 
-/* Running Text Container
+Running Text Container
 .running-text-container {
     width: 100%;
     height: 40px;
@@ -612,7 +612,7 @@ preloader
     padding: 10px 0;
     margin-top: 25px;
     position: relative;
-    /* Remove colors and shadows
+    /* Remove colors and shadows */
     background: transparent;
     border: 2px solid transparent;
     box-shadow: none;
@@ -627,7 +627,7 @@ preloader
     width: 100px;
     z-index: 2;
     pointer-events: none;
-    background: none; /* remove gradient fade effect if not needed
+    background: none; /* remove gradient fade effect if not needed */
 }
 
 .running-text-wrapper {
@@ -732,7 +732,7 @@ preloader
 .main-banner .item h6 {
     text-transform: full-width;
     font-size: 18px;
-    color: #040303; /* blue highlight
+    color: #040303; /* blue highlight */
     margin-bottom: 15px;
 }
 
@@ -813,16 +813,15 @@ preloader
 
 @keyframes revealLoop {
     0% {
-        clip-path: inset(0 100% 0 0); /* hidden
+        clip-path: inset(0 100% 0 0); /* hidden */
     }
     70% {
-        clip-path: inset(0 0 0 0); /* fully revealed
+        clip-path: inset(0 0 0 0); /* fully revealed */
     }
     100% {
-        clip-path: inset(0 100% 0 0); /* hide again for loop
+        clip-path: inset(0 100% 0 0); /* hide again for loop */
     }
 }
-*/
 
 
 
@@ -1845,7 +1844,7 @@ body {
 ---------------------------------------------
 Pricing - Ultra Modern Luxury Design
 ---------------------------------------------
-/* RESET
+RESET */
 * {
     margin: 0;
     padding: 0;
@@ -1857,7 +1856,7 @@ body {
     background: #f5f5f5;
     color: #fff;
     padding: 40px 20px;
-} */
+}
 
 
 
@@ -2362,7 +2361,7 @@ form#contact button:hover {
 
 
 
-/*
+
 
 ---------------------------------------------
 
@@ -2370,30 +2369,30 @@ form#contact button:hover {
 
 footer {
     background: linear-gradient(to right,
-    #ff7a3c 0%,   /* left orange
-    #ff7a3c 33%,  /* end of left section
-    #ffffff 33%,  /* start middle white
-    #ffffff 66%,  /* end middle white
-    #87cefa 66%,  /* start right sky blue
-    #87cefa 100%  /* end right section
+    #ff7a3c 0%,
+    #ff7a3c 33%,
+    #ffffff 33%,
+    #ffffff 66%,
+    #87cefa 66%,
+    #87cefa 100%
     );
-    color: #000; /* black text
+    color: #000;
     padding: 80px 0 40px;
     font-family: 'Poppins', sans-serif;
 }
 
-/* Links
+/*Links*/
 footer a {
     text-decoration: none;
-    color: #000; /* black links
+    color: #000; /* black links */
     transition: all 0.3s ease;
 }
 
 footer a:hover {
-    color: #03a4ed; /* blue hover accent
+    color: #03a4ed; /* blue hover accent */
 }
 
-/* Footer Flex Layout
+/* Footer Flex Layout */
 footer .container {
     display: flex;
     flex-wrap: wrap;
@@ -2534,7 +2533,7 @@ footer .copyright a {
 footer .copyright p {
     color: #000; /* black text
 }
-*/
+
 
 
 /*
@@ -2618,41 +2617,52 @@ responsive
 }
 
 @media (max-width: 767px) {
-  .main-banner .item .down-buttons {
-    display: inline-block;
-  }
-  .main-banner .item .down-buttons .main-blue-button {
-    margin-right: 0px;
-    margin-bottom: 15px;
-  }
-  .main-banner .item .down-buttons .call-button a {
-    margin-left: 0px;
-  }
-  .subscribe .inner-content:after {
-    z-index: -1;
-  }
-  .subscribe .inner-content {
-    padding: 60px 30px 100px 30px;
-  }
-  .subscribe .inner-content form input {
-    width: 49%;
-  }
-  .subscribe .inner-content form button {
-    width: 100%;
-    background-color: #ff695f;
-    margin-top: 30px;
-  }
-  .our-videos ul.nacc li {
-    transform: translateX(0px);
-    transform: translateY(-50px);
-  }
-  .contact-left-dec {
-    display: none;
-  }
-  .contact-us .info {
-    display: inline-block;
-  }
-  .contact-us .info span {
-    margin-bottom: 20px;
-  }
+    .main-banner .item .down-buttons {
+        display: inline-block;
+    }
+
+    .main-banner .item .down-buttons .main-blue-button {
+        margin-right: 0px;
+        margin-bottom: 15px;
+    }
+
+    .main-banner .item .down-buttons .call-button a {
+        margin-left: 0px;
+    }
+
+    .subscribe .inner-content:after {
+        z-index: -1;
+    }
+
+    .subscribe .inner-content {
+        padding: 60px 30px 100px 30px;
+    }
+
+    .subscribe .inner-content form input {
+        width: 49%;
+    }
+
+    .subscribe .inner-content form button {
+        width: 100%;
+        background-color: #ff695f;
+        margin-top: 30px;
+    }
+
+    .our-videos ul.nacc li {
+        transform: translateX(0px);
+        transform: translateY(-50px);
+    }
+
+    .contact-left-dec {
+        display: none;
+    }
+
+    .contact-us .info {
+        display: inline-block;
+    }
+
+    .contact-us .info span {
+        margin-bottom: 20px;
+    }
+}
 }
