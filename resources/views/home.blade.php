@@ -154,6 +154,31 @@
                         </div>
                     </div> -->
 
+                    <!-- Slide 3 -->
+                    <div class="item header-text">
+                        <h6>Innovation First</h6>
+                        <h1>
+                            An   <em>Innovative</em>  <span class="highlight">IT</span> Solutions  Agency
+                        </h1>
+                        <p>
+                            At CodeXpress, we deliver innovative IT solutions customized for your business. From web and mobile development to cloud services and IT consulting, our expert team ensures quality, efficiency, and long-term support.
+                        </p>
+                        <div class="down-buttons">
+                            <div class="main-blue-button-hover">
+                                <button class="green-button">Get Started</button>
+                            </div>
+                            <br>
+                            <div class="call-button">
+                                <a href="#"><i class="fa fa-phone"></i> 0777674308</a>
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+
                     <!-- Slide 2 -->
                     <div class="item header-text">
                         <h6>Expert Development</h6>
@@ -165,7 +190,7 @@
                         </p>
                         <div class="down-buttons">
                             <div class="main-blue-button-hover">
-                                <button class="cta-button">View Our Work</button>
+                                <button class="green-button">View Our Work</button>
                             </div>
                             <br>
                             <div class="call-button">
@@ -174,30 +199,7 @@
                         </div>
                     </div>
 
-                    <!-- Slide 3 -->
-                    <div class="item header-text">
-                        <h6>Innovation First</h6>
-                        <h1>
-                            An   <em>Innovative</em> IT <span class="highlight">Solutions </span> Agency
-                        </h1>
-                        <p>
-                            At CodeXpress, we deliver innovative IT solutions customized for your business. From web and mobile development to cloud services and IT consulting, our expert team ensures quality, efficiency, and long-term support.
-                        </p>
-                        <div class="down-buttons">
-                            <div class="main-blue-button-hover">
-                                <button class="cta-button">Get Started</button>
-                            </div>
-                            <br>
-                            <div class="call-button">
-                                <a href="#"><i class="fa fa-phone"></i> 0777674308</a>
-                            </div>
-                        </div>
 
-
-
-
-
-                    </div>
                 </div>
             </div>
         </div>
@@ -386,7 +388,8 @@
     </div>
 
 
-
+<br>
+    <br>
 
 
 
@@ -416,7 +419,8 @@
 
     </div>
 
-
+<br>
+    <br>
 
     <!--client review -->
     <div class="client-reviews-section">

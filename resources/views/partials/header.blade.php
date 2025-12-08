@@ -8,7 +8,7 @@
                 <!--    <a href="index.html" class="logo">
                         <img src="assets/images/lg.png" style="width:150px; height:auto;">
                     </a> --><a href="index.html" class="logo" style="font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 700; text-decoration: none;">
-                        <span style="color: #00ffcc; ">Code</span>
+                        <span style="color: #00ffcc; font-weight: 900; ">Code</span>
                         <span style="color: #000000 ; font-weight: 900;">
         <span style="font-size: 36px;">X</span>press
     </span>

@@ -117,13 +117,15 @@
         }
 
         .btn-primary {
-            background: #00ffcc;
+            background: #023c2d;
             color: white;
-            border: 2px solid #00ffcc;
+            border-radius: 23px;
+            border: none;
         }
 
         .btn-primary:hover {
-            background: #00ffcc;
+            background-color: #00ffcc;
+            color: #000000;
             border-color:#00ffcc;
         }
 

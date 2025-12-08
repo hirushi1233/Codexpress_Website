@@ -237,16 +237,17 @@ body {
 }
 
 .main-red-button a {
-  display: inline-block;
-  background-color: #023c2d;
-  font-size: 15px;
-  font-weight: 400;
-  color: #fff;
-  text-transform: capitalize;
-  padding: 12px 25px;
-  border-radius: 23px;
-  letter-spacing: 0.25px;
+    display: inline-block;
+    background-color: #023c2d;
+    font-size: 15px;
+    font-weight: 400;
+    color: #000000;        /* changed text color to black */
+    text-transform: capitalize;
+    padding: 12px 25px;
+    border-radius: 23px;
+    letter-spacing: 0.25px;
 }
+
 
 .main-red-button-hover a {
   display: inline-block;
@@ -263,6 +264,7 @@ body {
 
 .main-red-button-hover a:hover {
   background-color: #00ffcc;
+
 }
 
 .main-white-button a {
@@ -1164,24 +1166,25 @@ body {
     margin-bottom: 40px;
 }
 
-.cta-button {
-    display: inline-block;
-    background: #5500ff;
-    color: #ffffff;
-    padding: 18px 40px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: all 0.3s ease;
+/* Button always green with white text */
+/* Always green button with white text, no hover */
+.green-button {
+    background-color: #023c2d;  /* green background */
+    color: #ffffff;             /* white text */
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: capitalize;
+    padding: 12px 25px;
+    border-radius: 23px;
     border: none;
     cursor: pointer;
+    transition: none;           /* remove hover animation */
 }
 
-.cta-button:hover {
-    background: #00ffcc;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
+/* Ensure hover stays the same */
+.green-button:hover {
+    background-color: #00ffcc;
+    color: #000000;
 }
 
 .logo-section {
@@ -1397,6 +1400,7 @@ body {
     padding: 80px 20px;
     background: #f5f5f5;
     text-align: center;
+    margin-bottom: 80px; /* adjust as you like */
 }
 
 .tech-stack-section .section-header {
