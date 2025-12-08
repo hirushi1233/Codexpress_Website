@@ -143,12 +143,26 @@
             margin-bottom: 35px;
             font-weight: 500;
         }
+        .contact-email {
+            display: flex;
+            align-items: center;
+            color: #000000;
+            font-size: 16px;
+            margin-bottom: 35px;
+            font-weight: 500;
+        }
 
         .contact-phone::before {
             content: '📞';
             margin-right: 10px;
             font-size: 18px;
         }
+        .contact-email::before {
+            content: '📧';
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
 
         .newsletter h4 {
             font-size: 15px;
@@ -365,6 +379,7 @@
                         <a href="#" class="btn btn-primary">Schedule a Call</a>
                     </div>
                     <div class="contact-phone">+94 777 674 308</div>
+                    <div class="contact-email">codexpress12info@gmail.com</div>
 
                     <div class="newsletter">
                         <h4>Get insights from the experts on building and scaling technology teams.</h4>

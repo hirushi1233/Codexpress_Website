@@ -603,7 +603,7 @@ preloader
 
 
 
-/* Running Text Container */
+/* Running Text Container
 .running-text-container {
     width: 100%;
     height: 40px;
@@ -612,7 +612,7 @@ preloader
     padding: 10px 0;
     margin-top: 25px;
     position: relative;
-    /* Remove colors and shadows */
+    /* Remove colors and shadows
     background: transparent;
     border: 2px solid transparent;
     box-shadow: none;
@@ -627,7 +627,7 @@ preloader
     width: 100px;
     z-index: 2;
     pointer-events: none;
-    background: none; /* remove gradient fade effect if not needed */
+    background: none; /* remove gradient fade effect if not needed
 }
 
 .running-text-wrapper {
@@ -732,7 +732,7 @@ preloader
 .main-banner .item h6 {
     text-transform: full-width;
     font-size: 18px;
-    color: #040303; /* blue highlight */
+    color: #040303; /* blue highlight
     margin-bottom: 15px;
 }
 
@@ -813,24 +813,15 @@ preloader
 
 @keyframes revealLoop {
     0% {
-        clip-path: inset(0 100% 0 0); /* hidden */
+        clip-path: inset(0 100% 0 0); /* hidden
     }
     70% {
-        clip-path: inset(0 0 0 0); /* fully revealed */
+        clip-path: inset(0 0 0 0); /* fully revealed
     }
     100% {
-        clip-path: inset(0 100% 0 0); /* hide again for loop */
+        clip-path: inset(0 100% 0 0); /* hide again for loop
     }
 }
-
-
-
-
-
-/*
----------------------------------------------
-Services Style
----------------------------------------------
 */
 
 
@@ -838,9 +829,14 @@ Services Style
 
 
 
+
+
+
+
+
 /*
 ---------------------------------------------
-Portfolio
+our latest insights
 ---------------------------------------------
 */
 
@@ -1094,8 +1090,13 @@ body {
 }
 
 
-<!-- home page -->
-/* HOME PAGE - SPOTLIGHT SECTION */
+
+/*
+---------------------------------------------
+Home
+---------------------------------------------
+*/
+
 * {
     margin: 0;
     padding: 0;
@@ -1268,7 +1269,13 @@ body {
 
 
 
-/* OUR SERVICES SECTION */
+
+/*
+---------------------------------------------
+services
+---------------------------------------------
+*/
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     background: #f5f5f5;
@@ -1401,7 +1408,13 @@ body {
 }
 
 
-/* TECH STACK SECTION */
+
+/*
+---------------------------------------------
+tech stack section
+---------------------------------------------
+*/
+
 .tech-stack-section {
     max-width: 1400px;
     margin: 0 auto;
@@ -1552,7 +1565,13 @@ body {
     }
 }
 
-/* client review section */
+
+/*
+---------------------------------------------
+client review
+---------------------------------------------
+*/
+
 
 
 * {
@@ -1826,7 +1845,7 @@ body {
 ---------------------------------------------
 Pricing - Ultra Modern Luxury Design
 ---------------------------------------------
-/* RESET */
+/* RESET
 * {
     margin: 0;
     padding: 0;
@@ -1838,9 +1857,18 @@ body {
     background: #f5f5f5;
     color: #fff;
     padding: 40px 20px;
-}
+} */
 
-/* TESTIMONIAL SECTION */
+
+
+
+
+/*
+---------------------------------------------
+About
+---------------------------------------------
+*/
+
 * {
     margin: 0;
     padding: 0;
@@ -2089,8 +2117,6 @@ body {
 */
 
 
-
-
  * {
      margin: 0;
      padding: 0;
@@ -2264,8 +2290,8 @@ contact
   display: inline-block;
   text-align: center;
   line-height: 46px;
-  background: #00ffcc;
-  background: linear-gradient(105deg, rgba(255,104,95,1) 0%, rgba(255,144,104,1) 100%);
+  background: #040303;
+  background: linear-gradient(105deg, rgb(2, 97, 73) 0%, rgb(4, 3, 3) 100%);
   border-radius: 50%;
   color: #fff;
   font-size: 22px;
@@ -2331,41 +2357,43 @@ form#contact button {
 }
 
 form#contact button:hover {
-  background-color: #03a4ed;
+  background-color: #026149;
 }
 
 
 
-/* ---------------------------------------------
-Footer Style - 3 Vertical Sections: Orange | White | Sky Blue
---------------------------------------------- */
+/*
+
+---------------------------------------------
+
+
 
 footer {
     background: linear-gradient(to right,
-    #ff7a3c 0%,   /* left orange */
-    #ff7a3c 33%,  /* end of left section */
-    #ffffff 33%,  /* start middle white */
-    #ffffff 66%,  /* end middle white */
-    #87cefa 66%,  /* start right sky blue */
-    #87cefa 100%  /* end right section */
+    #ff7a3c 0%,   /* left orange
+    #ff7a3c 33%,  /* end of left section
+    #ffffff 33%,  /* start middle white
+    #ffffff 66%,  /* end middle white
+    #87cefa 66%,  /* start right sky blue
+    #87cefa 100%  /* end right section
     );
-    color: #000; /* black text */
+    color: #000; /* black text
     padding: 80px 0 40px;
     font-family: 'Poppins', sans-serif;
 }
 
-/* Links */
+/* Links
 footer a {
     text-decoration: none;
-    color: #000; /* black links */
+    color: #000; /* black links
     transition: all 0.3s ease;
 }
 
 footer a:hover {
-    color: #03a4ed; /* blue hover accent */
+    color: #03a4ed; /* blue hover accent
 }
 
-/* Footer Flex Layout */
+/* Footer Flex Layout
 footer .container {
     display: flex;
     flex-wrap: wrap;
@@ -2381,12 +2409,12 @@ footer .footer-item {
 footer .footer-item h4 {
     font-size: 18px;
     font-weight: 700;
-    color: #000; /* black headings */
+    color: #000; /* black headings
     margin-bottom: 25px;
     text-transform: uppercase;
 }
 
-/* About Section */
+/* About Section
 footer .about .logo img {
     width: 180px;
     margin-bottom: 20px;
@@ -2394,12 +2422,12 @@ footer .about .logo img {
 
 footer .about p {
     font-size: 14px;
-    color: #000; /* black paragraph text */
+    color: #000; /* black paragraph text
     line-height: 1.6;
     margin-bottom: 25px;
 }
 
-/* Social Icons */
+/* Social Icons
 footer .about ul {
     display: flex;
     gap: 12px;
@@ -2411,7 +2439,7 @@ footer .about ul li a {
     justify-content: center;
     width: 36px;
     height: 36px;
-    background-color: #ffffff; /* blue icons */
+    background-color: #ffffff; /* blue icons
     color: #fff;
     border-radius: 50%;
     font-size: 16px;
@@ -2419,11 +2447,11 @@ footer .about ul li a {
 }
 
 footer .about ul li a:hover {
-    background-color: #ffffff; /* red/orange hover */
+    background-color: #ffffff; /* red/orange hover
     transform: scale(1.1);
 }
 
-/* Services & Support Links */
+/* Services & Support Links
 footer .footer-item ul {
     list-style: none;
     padding: 0;
@@ -2436,16 +2464,16 @@ footer .footer-item ul li {
 
 footer .footer-item ul li a {
     font-size: 14px;
-    color: #040303; /* black links */
+    color: #040303; /* black links
     transition: all 0.3s;
 }
 
 footer .footer-item ul li a:hover {
-    color: #03a4ed; /* blue hover */
+    color: #03a4ed; /* blue hover
     padding-left: 5px;
 }
 
-/* Contact Section */
+/* Contact Section
 footer .contact-info ul li {
     display: flex;
     align-items: center;
@@ -2454,11 +2482,11 @@ footer .contact-info ul li {
 }
 
 footer .contact-info ul li i {
-    color: #ffffff; /* blue icons */
+    color: #ffffff; /* blue icons
     font-size: 18px;
 }
 
-/* Footer Buttons */
+/* Footer Buttons
 footer .footer-item form {
     display: flex;
     margin-top: 15px;
@@ -2476,7 +2504,7 @@ footer .footer-item form input {
 footer .footer-item form button {
     padding: 12px 25px;
     border-radius: 0 23px 23px 0;
-    background-color: #03a4ed; /* blue button */
+    background-color: #03a4ed; /* blue button
     color: #fff;
     border: none;
     cursor: pointer;
@@ -2484,10 +2512,10 @@ footer .footer-item form button {
 }
 
 footer .footer-item form button:hover {
-    background-color: #ff695f; /* red/orange hover */
+    background-color: #ff695f; /* red/orange hover
 }
 
-/* Copyright */
+/* Copyright
 footer .copyright {
     width: 100%;
     text-align: center;
@@ -2495,18 +2523,18 @@ footer .copyright {
     margin-top: 50px;
     padding-top: 20px;
     font-size: 13px;
-    color: #000; /* black text */
+    color: #000; /* black text
 }
 
 footer .copyright a {
-    color: #03a4ed; /* blue links */
+    color: #03a4ed; /* blue links
     font-weight: 500;
 }
 
 footer .copyright p {
-    color: #000; /* black text */
+    color: #000; /* black text
 }
-
+*/
 
 
 /*

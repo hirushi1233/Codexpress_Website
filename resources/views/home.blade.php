@@ -126,7 +126,7 @@
         </div>
     </div>
 -->
-
+<!--Home-->
 
     <section class="spotlight-section">
         <div class="spotlight-background"></div>
@@ -134,7 +134,7 @@
         <div class="spotlight-container">
             <div class="spotlight-content">
                 <div class="owl-carousel owl-banner">
-                    <!-- Slide 1
+                    <!-- Slide 1-->
                     <div class="item header-text">
                         <h6>Welcome to Your Business</h6>
                         <h1>
@@ -149,7 +149,7 @@
                             </div>
                             <br>
                             <div class="call-button">
-                                <a href="#"><i class="fa fa-phone"></i> 010-020-0340</a>
+                                <a href="#"><i class="fa fa-phone"></i> 0777674308</a>
                             </div>
                         </div>
                     </div> -->
@@ -172,11 +172,6 @@
                                 <a href="#"><i class="fa fa-phone"></i> 0777674308</a>
                             </div>
                         </div>
-
-
-
-
-
                     </div>
 
                     <!-- Slide 2 -->
@@ -198,15 +193,14 @@
                             </div>
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </div>
     </section>
 
-<br>
-    <!--testimonial about section-->
+
+
+    <!-- about -->
     <section class="testimonials-section" id="awards">
         <div class="container">
 
@@ -294,7 +288,7 @@
 
 <br>
 
-    <!-- our servces part  02 -->
+    <!-- services -->
     <div class="services-section">
         <div class="section-header">
             <h1>Full-Stack Solutions for Every <br>Stage of Your Vision.<span class="highlight"></span></h1>
@@ -523,9 +517,7 @@
 
 
 
-
-
-    <!-- portolio section -->
+    <!-- our latest insight -->
     <div id="portfolio" class="our-portfolio section">
         <div class="container">
             <div class="portfolio-header">
@@ -626,9 +618,7 @@
 
 
 
-
-
-
+    <!--contact-->
 
     <div id="contact" class="contact-us section">
         <div class="container">
@@ -639,10 +629,10 @@
                         <div id="map">
                             <iframe src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="360px" frameborder="0" style="border:0" allowfullscreen=""></iframe>
                         </div>
-                        <div class="info">
+                       <!--<div class="info">
                             <span><i class="fa fa-phone"></i> <a href="#">0777674308</a></span>
                             <span><i class="fa fa-envelope"></i> <a href="#">codexpressinfo12@gmail.com</a></span>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="col-lg-5 align-self-center">
@@ -680,6 +670,8 @@
         </div>
 <br>
         <br>
+
+        <!--cta section-->
         <section class="cta-section">
         <div class="container">
             <div class="cta-content">
