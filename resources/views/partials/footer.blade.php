@@ -398,9 +398,7 @@
                         <h4>Follow us.</h4>
                         <ul class="social-links">
                             <li><a href="#" title="LinkedIn">in</a></li>
-
-                            <li><a href="https://www.facebook.com/share/1BUrtNajAw/" title="Facebook">f</a></li>
-
+                            <li><a href="#" title="Facebook">f</a></li>
                             <li><a href="#" title="Twitter">𝕏</a></li>
                             <li><a href="#" title="Instagram">📷</a></li>
                             <li><a href="#" title="YouTube">▶</a></li>
@@ -411,7 +409,7 @@
         </div>
 
         <div class="footer-bottom">
-            <div>CodeXpress 2020 - 2025. All rights reserved.</div>
+            <div>CodeXpress 2009 - 2025. All rights reserved.</div>
             <ul class="footer-bottom-links">
                 <li><a href="#">Privacy Policy</a></li>
                 <li><a href="#">Terms of Service</a></li>
