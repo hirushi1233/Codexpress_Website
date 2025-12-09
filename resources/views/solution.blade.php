@@ -13,111 +13,111 @@
             </div>
         </section>
 
-        <!-- Technologies Grid -->
-        <section class="technologies-section">
-            <div class="container tech-container">
+        <!-- Solutions Grid -->
+        <section class="solutions-section">
+            <div class="container solutions-container">
 
                 <!-- TOP SOLUTIONS -->
                 <div class="section-header">
                     <h2 class="section-title">TOP SOLUTIONS</h2>
                 </div>
 
-                <div class="technologies-grid">
+                <div class="solutions-grid">
                     <!-- Back-End Development -->
-                    <div class="tech-card">
-                        <div class="tech-icon tech-icon-backend">
+                    <div class="solutions-card">
+                        <div class="solutions-icon solutions-icon-backend">
                             <span class="tech-icon-text">BE</span>
                         </div>
-                        <h3 class="tech-title">Back-End Development</h3>
-                        <p class="tech-description">
+                        <h3 class="solutions-title">Back-End Development</h3>
+                        <p class="solutions-description">
                             Robust server-side solutions with Laravel, Node.js, Python, and .NET for scalable applications.
                         </p>
                     </div>
 
                     <!-- Front-End Development -->
-                    <div class="tech-card">
-                        <div class="tech-icon tech-icon-frontend">
-                            <span class="tech-icon-text">FE</span>
+                    <div class="solutions-card">
+                        <div class="solutions-icon solutions-icon-frontend">
+                            <span class="solutions-icon-text">FE</span>
                         </div>
-                        <h3 class="tech-title">Front-End Development</h3>
-                        <p class="tech-description">
+                        <h3 class="solutions-title">Front-End Development</h3>
+                        <p class="solutions-description">
                             Modern, responsive interfaces using React, Vue.js, and Angular for seamless user experiences.
                         </p>
                     </div>
 
                     <!-- UX/UI Design -->
-                    <div class="tech-card">
-                        <div class="tech-icon tech-icon-design">
-                            <span class="tech-icon-text">UI</span>
+                    <div class="solutions-card">
+                        <div class="solutions-icon solutions-icon-design">
+                            <span class="solutions-icon-text">UI</span>
                         </div>
-                        <h3 class="tech-title">UX/UI Design</h3>
-                        <p class="tech-description">
+                        <h3 class="solutions-title">UX/UI Design</h3>
+                        <p class="solutions-description">
                             User-centered designs that combine aesthetics with functionality for maximum engagement.
                         </p>
                     </div>
 
                     <!-- Android App Development -->
-                    <div class="tech-card">
-                        <div class="tech-icon tech-icon-android">
-                            <span class="tech-icon-text">AD</span>
+                    <div class="solutions-card">
+                        <div class="solutions-icon solutions-icon-android">
+                            <span class="solutions-icon-text">AD</span>
                         </div>
-                        <h3 class="tech-title">Android App Development</h3>
-                        <p class="tech-description">
+                        <h3 class="solutions-title">Android App Development</h3>
+                        <p class="solutions-description">
                             Native Android apps with Kotlin and Java for performance and reliability.
                         </p>
                     </div>
 
                     <!-- Business Intelligence -->
-                    <div class="tech-card">
-                        <div class="tech-icon tech-icon-bi">
-                            <span class="tech-icon-text">BI</span>
+                    <div class="solutions-card">
+                        <div class="solutions-icon solutions-icon-bi">
+                            <span class="solutions-icon-text">BI</span>
                         </div>
-                        <h3 class="tech-title">Business Intelligence</h3>
-                        <p class="tech-description">
+                        <h3 class="solutions-title">Business Intelligence</h3>
+                        <p class="solutions-description">
                             Data-driven insights with Power BI, Tableau, and custom analytics dashboards.
                         </p>
                     </div>
 
                     <!-- ECommerce Development -->
-                    <div class="tech-card">
-                        <div class="tech-icon tech-icon-ecommerce">
-                            <span class="tech-icon-text">EC</span>
+                    <div class="solutions-card">
+                        <div class="solutions-icon solutions-icon-ecommerce">
+                            <span class="solutions-icon-text">EC</span>
                         </div>
-                        <h3 class="tech-title">ECommerce Development</h3>
-                        <p class="tech-description">
+                        <h3 class="solutions-title">ECommerce Development</h3>
+                        <p class="solutions-description">
                             Complete online stores with Shopify, WooCommerce, and custom platforms.
                         </p>
                     </div>
 
                     <!-- Mobile App Development -->
-                    <div class="tech-card">
-                        <div class="tech-icon tech-icon-mobile">
-                            <span class="tech-icon-text">MA</span>
+                    <div class="solutions-card">
+                        <div class="solutions-icon solutions-icon-mobile">
+                            <span class="solutions-icon-text">MA</span>
                         </div>
-                        <h3 class="tech-title">Mobile App Development</h3>
-                        <p class="tech-description">
+                        <h3 class="solutions-title">Mobile App Development</h3>
+                        <p class="solutions-description">
                             Cross-platform apps with Flutter and React Native for iOS and Android.
                         </p>
                     </div>
 
                     <!-- SaaS Development -->
-                    <div class="tech-card">
-                        <div class="tech-icon tech-icon-saas">
-                            <span class="tech-icon-text">SS</span>
+                    <div class="solutions-card">
+                        <div class="solutions-icon solutions-icon-saas">
+                            <span class="solutions-icon-text">SS</span>
                         </div>
-                        <h3 class="tech-title">SaaS Development</h3>
-                        <p class="tech-description">
+                        <h3 class="solutions-title">SaaS Development</h3>
+                        <p class="solutions-description">
                             Cloud-based software solutions with multi-tenancy, subscription management, and scalability.
                         </p>
                     </div>
 
                     <!-- Web Development -->
-                    <div class="tech-card">
-                        <div class="tech-icon tech-icon-web">
-                            <span class="tech-icon-text">WD</span>
+                    <div class="solutions-card">
+                        <div class="solutions-icon solutions-icon-web">
+                            <span class="solutions-icon-text">WD</span>
                         </div>
-                        <h3 class="tech-title">Web Development</h3>
-                        <p class="tech-description">
+                        <h3 class="solutions-title">Web Development</h3>
+                        <p class="solutions-description">
                             Full-stack web applications tailored to your business needs and goals.
                         </p>
                     </div>
@@ -128,36 +128,36 @@
                     <h2 class="section-title">ENTERPRISE FOCUSED</h2>
                 </div>
 
-                <div class="technologies-grid">
+                <div class="solutions-grid">
                     <!-- Backup Solutions -->
-                    <div class="tech-card">
-                        <div class="tech-icon tech-icon-backup">
-                            <span class="tech-icon-text">BK</span>
+                    <div class="solutions-card">
+                        <div class="solutions-icon solutions-icon-backup">
+                            <span class="solutions-icon-text">BK</span>
                         </div>
-                        <h3 class="tech-title">Backup Solutions</h3>
-                        <p class="tech-description">
+                        <h3 class="solutions-title">Backup Solutions</h3>
+                        <p class="solutions-description">
                             Automated backup systems and disaster recovery plans to protect your critical business data.
                         </p>
                     </div>
 
                     <!-- Digital Transformation -->
-                    <div class="tech-card">
-                        <div class="tech-icon tech-icon-digital">
-                            <span class="tech-icon-text">DT</span>
+                    <div class="solutions-card">
+                        <div class="solutions-icon solutions-icon-digital">
+                            <span class="solutions-icon-text">DT</span>
                         </div>
-                        <h3 class="tech-title">Digital Transformation</h3>
-                        <p class="tech-description">
+                        <h3 class="solutions-title">Digital Transformation</h3>
+                        <p class="solutions-description">
                             Modernize operations with cloud migration, process automation, and digital strategy.
                         </p>
                     </div>
 
                     <!-- ERP Development -->
-                    <div class="tech-card">
-                        <div class="tech-icon tech-icon-erp">
-                            <span class="tech-icon-text">ER</span>
+                    <div class="solutions-card">
+                        <div class="solutions-icon solutions-icon-erp">
+                            <span class="solutions-icon-text">ER</span>
                         </div>
-                        <h3 class="tech-title">ERP Development</h3>
-                        <p class="tech-description">
+                        <h3 class="solutions-title">ERP Development</h3>
+                        <p class="solutions-description">
                             Custom Enterprise Resource Planning systems to streamline your business processes.
                         </p>
                     </div>
@@ -197,13 +197,13 @@
             color: #ffffff;
         }
 
-        /* Technologies Section Styles */
-        .technologies-section {
+        /*solutions Section Styles */
+        .solutions-section {
             padding: 80px 20px;
             background: #f8f9fa;
         }
 
-        .tech-container {
+        .solutions-container {
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -236,14 +236,14 @@
             margin-top: 60px;
         }
 
-        .technologies-grid {
+        .solutions-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 30px;
         }
 
-        /* Tech Card Styles */
-        .tech-card {
+        /* solutions Card Styles */
+        .solutions-card {
             background: white;
             border-radius: 20px;
             padding: 28px;
@@ -257,14 +257,14 @@
         }
 
         /* Hover Effect */
-        .tech-card:hover {
+        .solutions-card:hover {
             transform: translateY(-8px) scale(1.03);
             border-color: rgba(13, 202, 240, 0.45);
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
         }
 
         /* Bottom line animation */
-        .tech-card::after {
+        .solutions-card::after {
             content: "";
             position: absolute;
             left: 50%;
@@ -276,12 +276,12 @@
             transform: translateX(-50%);
         }
 
-        .tech-card:hover::after {
+        .solutions-card:hover::after {
             width: 80%;
         }
 
-        /* Tech Icon Styles */
-        .tech-icon {
+        /* solutions Icon Styles */
+        .solutions-icon {
             width: 60px;
             height: 60px;
             border-radius: 12px;
@@ -291,70 +291,70 @@
             margin: 0 auto 20px;
         }
 
-        .tech-icon-text {
+        .solutions-icon-text {
             color: white;
             font-size: 20px;
             font-weight: bold;
         }
 
         /* Individual Icon Colors */
-        .tech-icon-backend {
+        .solutions-icon-backend {
             background: linear-gradient(135deg, #667eea, #764ba2);
         }
 
-        .tech-icon-frontend {
+        .solutions-icon-frontend {
             background: linear-gradient(135deg, #f093fb, #f5576c);
         }
 
-        .tech-icon-design {
+        .solutions-icon-design {
             background: linear-gradient(135deg, #4facfe, #00f2fe);
         }
 
-        .tech-icon-android {
+        .solutions-icon-android {
             background: linear-gradient(135deg, #43e97b, #38f9d7);
         }
 
-        .tech-icon-bi {
+        .solutions-icon-bi {
             background: linear-gradient(135deg, #fa709a, #fee140);
         }
 
-        .tech-icon-ecommerce {
+        .solutions-icon-ecommerce {
             background: linear-gradient(135deg, #30cfd0, #330867);
         }
 
-        .tech-icon-mobile {
+        .solutions-icon-mobile {
             background: linear-gradient(135deg, #a8edea, #fed6e3);
         }
 
-        .tech-icon-saas {
+        .solutions-icon-saas {
             background: linear-gradient(135deg, #ff9a56, #ff6a88);
         }
 
-        .tech-icon-web {
+        .solutions-icon-web {
             background: linear-gradient(135deg, #ffecd2, #fcb69f);
         }
 
-        .tech-icon-backup {
+        .solutions-icon-backup {
             background: linear-gradient(135deg, #f77062, #fe5196);
         }
 
-        .tech-icon-digital {
+        .solutions-icon-digital {
             background: linear-gradient(135deg, #7f7fd5, #91eae4);
         }
 
-        .tech-icon-erp {
+        .solutions-icon-erp {
             background: linear-gradient(135deg, #3f2b96, #a8c0ff);
         }
 
-        /* Tech Card Text Styles */
-        .tech-title {
+        /* solutions Card Text Styles */
+        .solutions-title {
             font-size: 1.4rem;
             margin-bottom: 15px;
             color: #1a1a1a;
             font-weight: 600;
         }
 
-        .tech-description {
+        .solutions-description {
             color: #666;
             line-height: 1.6;
             font-size: 0.95rem;
