@@ -399,7 +399,8 @@
                         <ul class="social-links">
                             <li><a href="#" title="LinkedIn">in</a></li>
 
-                            <li><a href="#" title="Facebook">f</a></li>
+                            <li><a href="https://www.facebook.com/share/1BUrtNajAw/" title="Facebook">f</a></li>
+
                             <li><a href="#" title="Twitter">𝕏</a></li>
                             <li><a href="#" title="Instagram">📷</a></li>
                             <li><a href="#" title="YouTube">▶</a></li>
