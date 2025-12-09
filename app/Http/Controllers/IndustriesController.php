@@ -7,4 +7,6 @@ use Illuminate\Http\Request;
 class IndustriesController extends Controller
 {
     //
+
+
 }
