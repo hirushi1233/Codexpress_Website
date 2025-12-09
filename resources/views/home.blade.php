@@ -187,12 +187,14 @@
                         </p>
                         <div class="down-buttons">
                             <div class="main-blue-button-hover">
+                                <a href="#portfolio">
                                 <button class="green-button">View Our Work</button>
                             </div>
                             <br>
                             <div class="call-button">
                                 <a href="#"><i class="fa fa-phone"></i> 0777674308</a>
                             </div>
+
                         </div>
                     </div>
                 </div>

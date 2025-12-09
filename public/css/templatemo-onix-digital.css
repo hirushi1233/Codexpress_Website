@@ -219,7 +219,7 @@ body {
   letter-spacing: 0.25px;
 }
 
-.main-blue-button-hover a {
+/*.main-blue-button-hover a {
   display: inline-block;
   background-color: #03a4ed;
   font-size: 15px;
@@ -230,12 +230,12 @@ body {
   border-radius: 23px;
   letter-spacing: 0.25px;
   transition: all .3s;
-}
-
+}*/
+/*
 .main-blue-button-hover a:hover {
   background-color: #00ffcc;
 }
-
+*/
 .main-red-button a {
     display: inline-block;
     background-color: #023c2d;
