@@ -117,61 +117,138 @@
     @endif
 
     <!-- ========== SOLUTIONS ========== -->
-    <div class="section-header">
-        <h2><i class="fas fa-lightbulb"></i> Solutions Management</h2>
-    </div>
-
-    <div class="add-form">
-        <h5><i class="fas fa-plus-circle"></i> Add New Solution</h5>
-        <form method="POST" action="/admin/solution/add">
-            @csrf
-            <div class="row g-3">
-                <div class="col-md-4">
-                    <input type="text" name="title" class="form-control" placeholder="Enter title..." required>
-                </div>
-                <div class="col-md-6">
-                    <textarea name="description" class="form-control" placeholder="Enter description..." rows="1" required></textarea>
-                </div>
-                <div class="col-md-2">
-                    <button type="submit" class="btn btn-add w-100">
-                        <i class="fas fa-plus"></i> ADD
-                    </button>
-                </div>
-            </div>
-        </form>
-    </div>
-
-    @foreach($solutions as $solution)
-        <div class="card item-card">
-            <div class="card-body">
-                <form method="POST" action="/admin/solution/{{ $solution->id }}">
-                    @csrf
-                    <div class="row g-3 align-items-end">
-                        <div class="col-md-4">
-                            <label class="action-label">Title</label>
-                            <input type="text" name="title" class="form-control" value="{{ $solution->title }}" required>
-                        </div>
-                        <div class="col-md-5">
-                            <label class="action-label">Description</label>
-                            <textarea name="description" class="form-control" rows="2" required>{{ $solution->description }}</textarea>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="btn-group-actions">
-                                <button type="submit" class="btn btn-update">
-                                    <i class="fas fa-save"></i> UPDATE
-                                </button>
-                                <button type="button" class="btn btn-delete delete-btn" data-id="{{ $solution->id }}" data-type="solution">
-                                    <i class="fas fa-trash-alt"></i> DELETE
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
+        <div class="section-header">
+            <h2><i class="fas fa-cogs"></i> Solutions Management</h2>
         </div>
-    @endforeach
 
-    <!-- ========== TECHNOLOGIES ========== -->
+        <!-- Add New Solution Form -->
+        <div class="add-form mb-4">
+            <h5><i class="fas fa-plus-circle"></i> Add New Solution</h5>
+            <form method="POST" action="/admin/solution/add">
+                @csrf
+                <div class="row g-3 align-items-center">
+                    <div class="col-md-2">
+                        <input type="text" name="name" class="form-control" placeholder="Solution Name" required>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="url" name="icon_url" class="form-control" placeholder="Icon URL (https://...)">
+                    </div>
+                    <div class="col-md-2">
+                        <input type="text" name="icon_class" class="form-control" placeholder="Icon Class (optional)">
+                    </div>
+                    <div class="col-md-3">
+                        <textarea name="description" class="form-control" placeholder="Description" rows="1" required></textarea>
+                    </div>
+                    <div class="col-md-1">
+                        <select name="category" class="form-control" required>
+                            <option value="">Category</option>
+                            <option value="TOP SOLUTIONS">TOP SOLUTIONS</option>
+                            <option value="ENTERPRISE FOCUSED">ENTERPRISE FOCUSED</option>
+                        </select>
+                    </div>
+                    <div class="col-md-1">
+                        <input type="number" name="order" class="form-control" placeholder="Order" value="0">
+                    </div>
+                    <div class="col-md-2 d-flex align-items-center">
+                        <button type="submit" class="btn btn-add btn-sm"><i class="fas fa-plus"></i> ADD</button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+        <!-- List of Solutions -->
+        @foreach($solutions as $solution)
+            <div class="card item-card mb-2">
+                <div class="card-body">
+                    <form method="POST" action="/admin/solution/{{ $solution->id }}">
+                        @csrf
+                        <div class="row g-3 align-items-center">
+
+                            <!-- Icon -->
+                            <div class="col-md-1 d-flex justify-content-center align-items-center">
+                                @if($solution->icon_url)
+                                    <img src="{{ $solution->icon_url }}" alt="{{ $solution->name }}" class="solution-icon-img" style="width:50px; height:50px; object-fit:contain;">
+                                @else
+                                    <span class="solution-icon-placeholder">{{ strtoupper($solution->name[0]) }}</span>
+                                @endif
+                            </div>
+
+                            <!-- Name -->
+                            <div class="col-md-2">
+                                <label class="action-label">Name</label>
+                                <input type="text" name="name" class="form-control" value="{{ $solution->name }}" required>
+                            </div>
+
+                            <!-- Icon URL -->
+                            <div class="col-md-3">
+                                <label class="action-label">Icon URL</label>
+                                <input type="url" name="icon_url" class="form-control" value="{{ $solution->icon_url }}">
+                            </div>
+
+                            <!-- Icon Class -->
+                            <div class="col-md-1">
+                                <label class="action-label">Icon Class</label>
+                                <input type="text" name="icon_class" class="form-control" value="{{ $solution->icon_class ?? '' }}">
+                            </div>
+
+                            <!-- Description -->
+                            <div class="col-md-2">
+                                <label class="action-label">Description</label>
+                                <textarea name="description" class="form-control" rows="2" required>{{ $solution->description }}</textarea>
+                            </div>
+
+                            <!-- Category -->
+                            <div class="col-md-1">
+                                <label class="action-label">Category</label>
+                                <select name="category" class="form-control" required>
+                                    <option value="TOP SOLUTIONS" {{ $solution->category=='TOP SOLUTIONS' ? 'selected':'' }}>TOP SOLUTIONS</option>
+                                    <option value="ENTERPRISE FOCUSED" {{ $solution->category=='ENTERPRISE FOCUSED' ? 'selected':'' }}>ENTERPRISE FOCUSED</option>
+                                </select>
+                            </div>
+
+                            <!-- Order -->
+                            <div class="col-md-1">
+                                <label class="action-label">Order</label>
+                                <input type="number" name="order" class="form-control" value="{{ $solution->order }}">
+                            </div>
+
+                            <!-- Actions -->
+                            <div class="col-md-2 d-flex gap-2">
+                                <button type="submit" class="btn btn-update"><i class="fas fa-save"></i> UPDATE</button>
+                                <a href="/admin/solution/delete/{{ $solution->id }}" class="btn btn-delete"><i class="fas fa-trash-alt"></i> DELETE</a>
+                            </div>
+
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        @endforeach
+        <style>
+            /* Reduce button padding and font size */
+            .btn-update, .btn-delete {
+                padding: 4px 10px;   /* smaller padding */
+                font-size: 0.85rem;  /* smaller text */
+            }
+
+            .btn-update i, .btn-delete i {
+                font-size: 0.8rem;   /* smaller icon */
+            }
+
+            .btn-update, .btn-delete, .btn-add {
+                padding: 2px 6px;   /* smaller padding */
+                font-size: 0.8rem;  /* smaller text */
+            }
+
+            .btn-update i, .btn-delete i, .btn-add i {
+                font-size: 0.7rem;  /* smaller icon */
+            }
+
+        </style>
+
+
+        <!-- ========== TECHNOLOGIES ========== -->
     <div class="section-header">
         <h2><i class="fas fa-microchip"></i> Technologies Management</h2>
     </div>

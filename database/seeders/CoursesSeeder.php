@@ -11,7 +11,10 @@ class CoursesSeeder extends Seeder
      * Run the database seeds.
      */
     public function run(): void
+
+
     {
+        Courses::truncate();
         $courses = [
             [
                 'name' => 'Python Programming',

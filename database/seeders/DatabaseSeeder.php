@@ -12,6 +12,7 @@ class DatabaseSeeder extends Seeder
             TechnologySeeder::class,
             CoursesSeeder::class,
             AdminSeeder::class,
+            SolutionsSeeder::class,
         ]);
     }
 }

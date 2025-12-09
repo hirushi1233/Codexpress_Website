@@ -53,30 +53,53 @@ class AdminController extends Controller
     }
 
     // ========== SOLUTIONS ==========
+
+    /**
+     * Add a new solution
+     */
     public function addSolution(Request $request)
     {
         DB::table('solutions')->insert([
-            'title' => $request->title,
+            'name' => $request->name,
             'description' => $request->description,
+            'icon_url' => $request->icon_url,          // optional
+            'icon_class' => $request->icon_class ?? '', // optional
+            'category' => $request->category,          // TOP SOLUTIONS / ENTERPRISE FOCUSED
+            'order' => $request->order ?? 0,
+            'is_active' => $request->is_active ?? true,
             'created_at' => now(),
             'updated_at' => now()
         ]);
+
         return back()->with('success', 'Solution added!');
     }
 
+    /**
+     * Update an existing solution
+     */
     public function updateSolution(Request $request, $id)
     {
         DB::table('solutions')->where('id', $id)->update([
-            'title' => $request->title,
+            'name' => $request->name,
             'description' => $request->description,
+            'icon_url' => $request->icon_url,          // optional
+            'icon_class' => $request->icon_class ?? '', // optional
+            'category' => $request->category,
+            'order' => $request->order ?? 0,
+            'is_active' => $request->is_active ?? true,
             'updated_at' => now()
         ]);
+
         return back()->with('success', 'Solution updated!');
     }
 
+    /**
+     * Delete a solution
+     */
     public function deleteSolution($id)
     {
         DB::table('solutions')->where('id', $id)->delete();
+
         return back()->with('success', 'Solution deleted!');
     }
 
