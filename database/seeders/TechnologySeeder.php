@@ -9,6 +9,9 @@ class TechnologySeeder extends Seeder
 {
     public function run(): void
     {
+        // Clear existing technologies before seeding
+        Technology::truncate();
+
         $technologies = [
             [
                 'name' => 'HTML',
