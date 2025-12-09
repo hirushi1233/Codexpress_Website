@@ -11,40 +11,45 @@ use App\Http\Controllers\CoursesController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-/*Route::get('/technology', function () {
+Route::get('/technology', function () {
     return view('technology');
 })->name('technology');
-*/
+
 Route::get('/careers', function () {
     return view('careers');
 })->name('careers');
 
 
-/*Route::get('/courses', function () {
+Route::get('/courses', function () {
     return view('courses');
-})->name('courses');*/
-
-
-
+})->name('courses');
 
 
 //technology route
 Route::get('/technology', [TechnologyController::class, 'index'])->name('technology.index');
 
-
 // careers route
-Route::get('/careers', [CareersController::class, 'index'])->name('careers.index');
+
+Route::get('/career', function () {
+    return view('career');
+})->name('career.index');
 
 
 // solutions route
-Route::get('/solutions', [SolutionsController::class, 'index'])->name('solutions.index');
+
+Route::get('/solution', function () {
+    return view('solution');
+})->name('solution');
 
 //courses route
-Route::get('/courses', [CoursesController::class, 'index'])->name('courses.index');
+//Route::get('/courses', [CoursesController::class, 'index'])->name('courses.index');
 
 
 // Add industries route
-Route::get('/industries', [IndustriesController::class, 'index'])->name('industries.index');
+
+Route::get('/industries', function () {
+    return view('industries');
+})->name('industries');
 
 
 
