@@ -17,92 +17,21 @@
             <div class="container tech-container">
                 <div class="technologies-grid">
 
-                    <!-- HTML -->
-                    <div class="tech-card">
-                        <div class="tech-icon tech-icon-html">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="tech-svg" />
+                    @forelse($technologies as $technology)
+                        <div class="tech-card">
+                            <div class="tech-icon {{ $technology->icon_class }}">
+                                <img src="{{ $technology->icon_url }}" class="tech-svg" alt="{{ $technology->name }}" />
+                            </div>
+                            <h3 class="tech-title">{{ $technology->name }}</h3>
+                            <p class="tech-description">
+                                {{ $technology->description }}
+                            </p>
                         </div>
-                        <h3 class="tech-title">HTML</h3>
-                        <p class="tech-description">
-                            The foundation of web pages. It structures content using tags like headings,
-                            paragraphs, images, and links. Think of it as the skeleton of a website.
-                        </p>
-                    </div>
-
-                    <!-- CSS -->
-                    <div class="tech-card">
-                        <div class="tech-icon tech-icon-css">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="tech-svg" />
+                    @empty
+                        <div class="col-12 text-center">
+                            <p>No technologies available at the moment.</p>
                         </div>
-                        <h3 class="tech-title">CSS</h3>
-                        <p class="tech-description">
-                            Makes websites look beautiful. It controls colors, fonts, layouts, spacing,
-                            and animations. It's the styling layer that turns plain HTML into visually
-                            appealing pages.
-                        </p>
-                    </div>
-
-                    <!-- JavaScript -->
-                    <div class="tech-card">
-                        <div class="tech-icon tech-icon-javascript">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="tech-svg" />
-                        </div>
-                        <h3 class="tech-title">JavaScript</h3>
-                        <p class="tech-description">
-                            Adds interactivity and behavior to websites. It makes things happen when you
-                            click buttons, submit forms, or see animations. It's the programming language
-                            that brings websites to life.
-                        </p>
-                    </div>
-
-                    <!-- Bootstrap -->
-                    <div class="tech-card">
-                        <div class="tech-icon tech-icon-bootstrap">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" class="tech-svg" />
-                        </div>
-                        <h3 class="tech-title">Bootstrap</h3>
-                        <p class="tech-description">
-                            A CSS framework with pre-built components like buttons, navigation bars,
-                            and grids. Helps developers build responsive, mobile-friendly websites fast.
-                        </p>
-                    </div>
-
-                    <!-- Laravel -->
-                    <div class="tech-card">
-                        <div class="tech-icon tech-icon-laravel">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" class="tech-svg" />
-                        </div>
-                        <h3 class="tech-title">Laravel</h3>
-                        <p class="tech-description">
-                            A PHP framework for building server-side web apps. Handles databases, user
-                            authentication, routing, and backend logic. Secure and scalable.
-                        </p>
-                    </div>
-
-                    <!-- React -->
-                    <div class="tech-card">
-                        <div class="tech-icon tech-icon-react">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="tech-svg" />
-                        </div>
-                        <h3 class="tech-title">React</h3>
-                        <p class="tech-description">
-                            A JavaScript library for building user interfaces with reusable components.
-                            Popular for single-page applications. Created by Facebook.
-                        </p>
-                    </div>
-
-                    <!-- Next.js -->
-                    <div class="tech-card">
-                        <div class="tech-icon tech-icon-nextjs">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" class="tech-svg" />
-                        </div>
-                        <h3 class="tech-title">Next.js</h3>
-                        <p class="tech-description">
-                            A React framework with SSR, static site generation, and built-in routing.
-                            Makes React apps fast, SEO-friendly, and production-ready.
-                        </p>
-                    </div>
-
+                    @endforelse
 
                 </div>
             </div>
@@ -117,6 +46,7 @@
             </div>
         </section>
     </div>
+
     <br>
 
     <!-- All Styles Below -->

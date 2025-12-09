@@ -106,7 +106,7 @@
 
                         <!-- Technologies Mega Dropdown -->
                         <li class="scroll-to-section has-mega-dropdown">
-                            <a href="{{ route('technology') }}" style="color: #1a1a1a; font-weight: 700;">
+                            <a href="{{ route('technology.index') }}" style="color: #1a1a1a; font-weight: 700;">
                                 Technologies
                                 <i class="fa fa-angle-down" onclick="event.preventDefault(); event.stopPropagation();"></i>
                             </a>
