@@ -104,8 +104,8 @@ class AdminController extends Controller
             'updated_at' => now()
         ]);
         return back()->with('success', 'Technology updated!');
-    }
 
+    }
     public function deleteTechnology($id)
     {
         DB::table('technologies')->where('id', $id)->delete();
