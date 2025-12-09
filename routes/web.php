@@ -17,3 +17,11 @@ Route::get('/careers', function () {
 Route::get('/courses', function () {
     return view('courses');
 })->name('courses');
+
+Route::get('/solution', function () {
+    return view('solution');
+})->name('solution');
+
+Route::get('/industries', function () {
+    return view('industries');
+})->name('industries');
