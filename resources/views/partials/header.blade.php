@@ -24,7 +24,11 @@
                         <li class="scroll-to-section"><a href="/" style="color: #1a1a1a; font-weight: 700;">Home</a></li>
                         <!-- Solutions Mega Dropdown -->
                         <li class="scroll-to-section has-mega-dropdown">
-                            <a href="#solutions" style="color: #1a1a1a; font-weight: 700;">Solutions <i class="fa fa-angle-down"></i></a>
+                            <a href="{{route('solutions.index') }}" style="color: #1a1a1a; font-weight: 700;">
+                                Solutions
+                                <i class="fa fa-angle-down" onclick="event.preventDefault(); event.stopPropagation();"></i>
+                            </a>
+
 
                             <div class="mega-dropdown-menu">
                                 <div class="mega-dropdown-container">
@@ -188,7 +192,10 @@
                         <!-- Industries Dropdown -->
                         <!-- Industries Mega Dropdown -->
                         <li class="scroll-to-section has-mega-dropdown">
-                            <a href="#industries" style="color: #1a1a1a; font-weight: 700;">Industries <i class="fa fa-angle-down"></i></a>
+                            <a href="{{ route('industries.index') }}" style="color: #1a1a1a; font-weight: 700;">
+                                Industries
+                                <i class="fa fa-angle-down" onclick="event.preventDefault(); event.stopPropagation();"></i>
+                            </a>
 
                             <div class="mega-dropdown-menu">
                                 <div class="mega-dropdown-container">
@@ -260,12 +267,12 @@
                         </li>
 
                         <li class="scroll-to-section">
-                            <a href="{{ route('careers') }}" style="color: #1a1a1a; font-weight: 700;">Careers</a>
+                            <a href="{{ route('careers.index') }}" style="color: #1a1a1a; font-weight: 700;">Careers</a>
                         </li>
 
 
                         <li class="scroll-to-section">
-                            <a href="{{ route('courses') }}" style="color: #1a1a1a; font-weight: 700;">Courses</a>
+                            <a href="{{ route('courses.index') }}" style="color: #1a1a1a; font-weight: 700;">Courses</a>
                         </li>
 
                         <li class="scroll-to-section"><div class="main-red-button-hover"><a href="#contact">Schedule a Call</a></div></li>
