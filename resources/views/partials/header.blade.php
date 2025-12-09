@@ -24,7 +24,7 @@
                         <li class="scroll-to-section"><a href="/" style="color: #1a1a1a; font-weight: 700;">Home</a></li>
                         <!-- Solutions Mega Dropdown -->
                         <li class="scroll-to-section has-mega-dropdown">
-                            <a href="{{route('solution')}}" style="color: #1a1a1a; font-weight: 700;">Solutions <i class="fa fa-angle-down"></i></a>
+                            <a href="#solutions" style="color: #1a1a1a; font-weight: 700;">Solutions <i class="fa fa-angle-down"></i></a>
 
                             <div class="mega-dropdown-menu">
                                 <div class="mega-dropdown-container">
@@ -188,7 +188,7 @@
                         <!-- Industries Dropdown -->
                         <!-- Industries Mega Dropdown -->
                         <li class="scroll-to-section has-mega-dropdown">
-                            <a href="{{route('industries')}}" style="color: #1a1a1a; font-weight: 700;">Industries <i class="fa fa-angle-down"></i></a>
+                            <a href="#industries" style="color: #1a1a1a; font-weight: 700;">Industries <i class="fa fa-angle-down"></i></a>
 
                             <div class="mega-dropdown-menu">
                                 <div class="mega-dropdown-container">
