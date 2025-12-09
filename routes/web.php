@@ -41,7 +41,7 @@ Route::get('/solution', function () {
     return view('solution');
 })->name('solution');
 
-//courses route
+////courses route
 //Route::get('/courses', [CoursesController::class, 'index'])->name('courses.index');
 
 
