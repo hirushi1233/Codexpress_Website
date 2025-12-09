@@ -117,13 +117,15 @@
         }
 
         .btn-primary {
-            background: #00ffcc;
+            background: #023c2d;
             color: white;
-            border: 2px solid #00ffcc;
+            border-radius: 23px;
+            border: none;
         }
 
         .btn-primary:hover {
-            background: #00ffcc;
+            background-color: #00ffcc;
+            color: #000000;
             border-color:#00ffcc;
         }
 
@@ -141,12 +143,26 @@
             margin-bottom: 35px;
             font-weight: 500;
         }
+        .contact-email {
+            display: flex;
+            align-items: center;
+            color: #000000;
+            font-size: 16px;
+            margin-bottom: 35px;
+            font-weight: 500;
+        }
 
         .contact-phone::before {
             content: '📞';
             margin-right: 10px;
             font-size: 18px;
         }
+        .contact-email::before {
+            content: '📧';
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
 
         .newsletter h4 {
             font-size: 15px;
@@ -250,13 +266,16 @@
             border-top: 1px solid #e5e7eb;
             padding: 25px 0;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;   /* stack text + links */
+            justify-content: center;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
+            text-align: center;
+            gap: 12px;
             font-size: 13px;
             color: #6b7280;
+            width: 100%;
         }
+
 
         .footer-bottom-links {
             display: flex;
@@ -307,6 +326,7 @@
             .footer-bottom-links {
                 flex-direction: column;
                 gap: 10px;
+
             }
         }
     </style>
@@ -359,6 +379,7 @@
                         <a href="#" class="btn btn-primary">Schedule a Call</a>
                     </div>
                     <div class="contact-phone">+94 777 674 308</div>
+                    <div class="contact-email">codexpress12info@gmail.com</div>
 
                     <div class="newsletter">
                         <h4>Get insights from the experts on building and scaling technology teams.</h4>
@@ -377,7 +398,9 @@
                         <h4>Follow us.</h4>
                         <ul class="social-links">
                             <li><a href="#" title="LinkedIn">in</a></li>
+
                             <li><a href="https://www.facebook.com/share/1BUrtNajAw/" title="Facebook">f</a></li>
+
                             <li><a href="#" title="Twitter">𝕏</a></li>
                             <li><a href="#" title="Instagram">📷</a></li>
                             <li><a href="#" title="YouTube">▶</a></li>
@@ -388,11 +411,11 @@
         </div>
 
         <div class="footer-bottom">
-            <div>CodeXpress 2009 - 2025. All rights reserved.</div>
+            <div>CodeXpress 2020 - 2025. All rights reserved.</div>
             <ul class="footer-bottom-links">
                 <li><a href="#">Privacy Policy</a></li>
                 <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">Do Not Sell My Personal Information</a></li>
+              <!--  <li><a href="#">Do Not Sell My Personal Information</a></li> -->
             </ul>
         </div>
     </div>

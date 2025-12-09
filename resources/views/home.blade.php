@@ -134,7 +134,8 @@
         <div class="spotlight-container">
             <div class="spotlight-content">
                 <div class="owl-carousel owl-banner">
-                    <!-- Slide 1
+                    <!--
+                     Slide 1
                     <div class="item header-text">
                         <h6>Welcome to Your Business</h6>
                         <h1>
@@ -149,10 +150,31 @@
                             </div>
                             <br>
                             <div class="call-button">
-                                <a href="#"><i class="fa fa-phone"></i> 010-020-0340</a>
+                                <a href="#"><i class="fa fa-phone"></i> 0777674308</a>
                             </div>
                         </div>
                     </div> -->
+    <!--home -->
+
+                    <!-- Slide 3 -->
+                    <div class="item header-text">
+                        <h6>Innovation First</h6>
+                        <h1>
+                            An   <em>Innovative</em>  <span class="highlight">IT</span> Solutions  Agency
+                        </h1>
+                        <p>
+                            At CodeXpress, we deliver innovative IT solutions customized for your business. From web and mobile development to cloud services and IT consulting, our expert team ensures quality, efficiency, and long-term support.
+                        </p>
+                        <div class="down-buttons">
+                            <div class="main-blue-button-hover">
+                                <button class="green-button">Get Started</button>
+                            </div>
+                            <br>
+                            <div class="call-button">
+                                <a href="#"><i class="fa fa-phone"></i> 0777674308</a>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- Slide 2 -->
                     <div class="item header-text">
@@ -165,46 +187,24 @@
                         </p>
                         <div class="down-buttons">
                             <div class="main-blue-button-hover">
-                                <button class="cta-button">View Our Work</button>
+                                <a href="#portfolio">
+                                <button class="green-button">View Our Work</button>
                             </div>
                             <br>
                             <div class="call-button">
                                 <a href="#"><i class="fa fa-phone"></i> 0777674308</a>
                             </div>
+
                         </div>
-                    </div>
-
-                    <!-- Slide 3 -->
-                    <div class="item header-text">
-                        <h6>Innovation First</h6>
-                        <h1>
-                            An   <em>Innovative</em> IT <span class="highlight">Solutions </span> Agency
-                        </h1>
-                        <p>
-                            At CodeXpress, we deliver innovative IT solutions customized for your business. From web and mobile development to cloud services and IT consulting, our expert team ensures quality, efficiency, and long-term support.
-                        </p>
-                        <div class="down-buttons">
-                            <div class="main-blue-button-hover">
-                                <button class="cta-button">Get Started</button>
-                            </div>
-                            <br>
-                            <div class="call-button">
-                                <a href="#"><i class="fa fa-phone"></i> 0777674308</a>
-                            </div>
-                        </div>
-
-
-
-
-
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-<br>
-    <!--testimonial about section-->
+
+
+    <!-- about -->
     <section class="testimonials-section" id="awards">
         <div class="container">
 
@@ -220,7 +220,7 @@
                     delivering world-class technology solutions with consistency, quality, and innovation.
                 </p>-->
             </div>
-
+<br>
             <!-- Grid Layout -->
             <div class="testimonials-grid">
 
@@ -243,6 +243,8 @@
                             <div class="stat-number">25000+</div>
                             <div class="stat-label">projects delivered</div>
                         </div>
+                        <br>
+                        <br>
                         <div class="stat-description">projects executed successfully</div>
                     </div>
 
@@ -262,7 +264,9 @@
                             <div class="stat-number">120+</div>
                             <div class="stat-label">Happy Students</div>
                         </div>
-                        <div class="stat-description">total happy studets</div>
+                        <br>
+                        <br>
+                        <div class="stat-description">total happy students</div>
                     </div>
                 </div>
 
@@ -292,7 +296,7 @@
 
 <br>
 
-    <!-- our servces part  02 -->
+    <!-- services -->
     <div class="services-section">
         <div class="section-header">
             <h1>Full-Stack Solutions for Every <br>Stage of Your Vision.<span class="highlight"></span></h1>
@@ -386,36 +390,53 @@
     </div>
 
 
-
+<br>
+    <br>
+    <br>
 
 
 
     <!-- tech stack -->
+
     <div class="tech-stack-section">
         <div class="section-header">
             <h1>Yes. We cover your tech stack<span class="highlight">.</span></h1>
             <p>Our 1,000+ team has expertise in almost every<br>programming language.</p>
         </div>
 
-        <div class="tech-grid">
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <!-- First set of items -->
+                <div class="tech-item">React</div>
+                <div class="tech-item">JavaScript</div>
+                <div class="tech-item">TypeScript</div>
+                <div class="tech-item">Node.js</div>
+                <div class="tech-item">Python</div>
+                <div class="tech-item">Docker</div>
+                <div class="tech-item">Kubernetes</div>
+                <div class="tech-item">AWS</div>
+                <div class="tech-item">MongoDB</div>
+                <div class="tech-item">PostgreSQL</div>
+                <div class="tech-item">Vue.js</div>
+                <div class="tech-item">Angular</div>
 
-            <div class="tech-item ">Node.js</div>
-            <div class="tech-item">Java</div>
-            <div class="tech-item">React</div>
-            <div class="tech-item">.NET</div>
-            <div class="tech-item">Android</div>
-            <div class="tech-item">iOS</div>
-            <div class="tech-item">Vue.js</div>
-            <div class="tech-item">C++</div>
-            <div class="tech-item">JavaScript</div>
-            <div class="tech-item">PHP</div>
-            <div class="tech-item">JavaScript</div>
-            <div class="tech-item">PHP</div>
+                <!-- Duplicated set for seamless loop -->
+                <div class="tech-item">React</div>
+                <div class="tech-item">JavaScript</div>
+                <div class="tech-item">TypeScript</div>
+                <div class="tech-item">Node.js</div>
+                <div class="tech-item">Python</div>
+                <div class="tech-item">Docker</div>
+                <div class="tech-item">Kubernetes</div>
+                <div class="tech-item">AWS</div>
+                <div class="tech-item">MongoDB</div>
+                <div class="tech-item">PostgreSQL</div>
+                <div class="tech-item">Vue.js</div>
+                <div class="tech-item">Angular</div>
+            </div>
         </div>
 
-
     </div>
-
 
 
     <!--client review -->
@@ -504,8 +525,7 @@
 
 
 
-
-    <!-- portolio section -->
+    <!-- our latest insight -->
     <div id="portfolio" class="our-portfolio section">
         <div class="container">
             <div class="portfolio-header">
@@ -606,9 +626,7 @@
 
 
 
-
-
-
+    <!--contact-->
 
     <div id="contact" class="contact-us section">
         <div class="container">
@@ -619,10 +637,10 @@
                         <div id="map">
                             <iframe src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="360px" frameborder="0" style="border:0" allowfullscreen=""></iframe>
                         </div>
-                        <div class="info">
+                       <!--<div class="info">
                             <span><i class="fa fa-phone"></i> <a href="#">0777674308</a></span>
                             <span><i class="fa fa-envelope"></i> <a href="#">codexpressinfo12@gmail.com</a></span>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="col-lg-5 align-self-center">
@@ -660,6 +678,8 @@
         </div>
 <br>
         <br>
+
+        <!--cta section-->
         <section class="cta-section">
         <div class="container">
             <div class="cta-content">
@@ -677,6 +697,9 @@
             </div>
         </div>
         </section>
+
+        <br>
+        <br>
 
         <!-- <div class="contact-dec">
             <img src="assets/images/contact-dec.png" alt="">
