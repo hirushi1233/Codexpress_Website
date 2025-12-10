@@ -171,8 +171,9 @@
                             </div>
                             <br>
                             <div class="call-button">
-                                <a href="https://wa.me/94777674308" target="_blank" style="color:#25D366; font-weight:bold; text-decoration:none;">
-                                    <i class="fab fa-whatsapp"></i> 077 767 4308
+                                <a href="https://wa.me/94777674308" target="_blank" style="text-decoration:none;">
+                                    <i class="fab fa-whatsapp" style="color:#25D366;"></i>
+                                    <span style="color:#001f3f; font-weight:bold;">077 767 4308</span>
                                 </a>
 
 
@@ -197,8 +198,9 @@
 
                             <br>
                             <div class="call-button">
-                                <a href="https://wa.me/94777674308" target="_blank" style="color:#25D366; font-weight:bold; text-decoration:none;">
-                                    <i class="fab fa-whatsapp"></i> 077 767 4308
+                                <a href="https://wa.me/94777674308" target="_blank" style="text-decoration:none;">
+                                    <i class="fab fa-whatsapp" style="color:#25D366;"></i>
+                                    <span style="color:#001f3f; font-weight:bold;">077 767 4308</span>
                                 </a>
 
 

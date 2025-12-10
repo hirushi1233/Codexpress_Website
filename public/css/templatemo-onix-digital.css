@@ -238,7 +238,7 @@ body {
 */
 .main-red-button a {
     display: inline-block;
-    background-color: #023c2d;
+    background-color: #28b3e5;
     font-size: 15px;
     font-weight: 400;
     color: #000000;        /* changed text color to black */
@@ -251,21 +251,33 @@ body {
 
 .main-red-button-hover a {
   display: inline-block;
-  background-color: #023c2d;
-  font-size: 15px;
-  font-weight: 400;
-  color:  #00ffcc;
-  text-transform: capitalize;
-  padding: 12px 25px;
-  border-radius: 23px;
-  letter-spacing: 0.25px;
-  transition: all .3s;
+    display: inline-flex;              /* enables flexbox layout */
+    align-items: center;               /* centers icon + text vertically */
+    justify-content: center;           /* centers them horizontally */
+    gap: 8px;                          /* space between icon and text */
+
+    background-color: #28b3e5;         /* button color */
+    color: #000;                       /* text color */
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: capitalize;
+
+    width: 220px;                      /* fixed equal width */
+    height: 50px;                      /* fixed equal height */
+    border-radius: 50px;               /* pill shape */
+    letter-spacing: 0.25px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
 }
 
 .main-red-button-hover a:hover {
-  background-color: #00ffcc;
-
+    background-color: #1fa2cf;         /* hover effect */
+    color: #fff;
 }
+
+
+
 
 .main-white-button a {
   display: inline-block;
@@ -1156,7 +1168,7 @@ body {
 }
 
 .spotlight-content h1 .highlight {
-    color:  #00ffcc;;
+    color:  #28b3e5;
 }
 
 .spotlight-content p {
@@ -1169,7 +1181,7 @@ body {
 /* Button always green with white text */
 /* Always green button with white text, no hover */
 .green-button {
-    background-color: #023c2d;  /* green background */
+    background-color: #28b3e5;  /* green background */
     color: #ffffff;             /* white text */
     font-size: 15px;
     font-weight: 500;
@@ -1183,7 +1195,7 @@ body {
 
 /* Ensure hover stays the same */
 .green-button:hover {
-    background-color: #00ffcc;
+    background-color: #28b3e5;
     color: #000000;
 }
 
@@ -1437,7 +1449,7 @@ tech stack section
 }
 
 .tech-stack-section .section-header h1 .highlight {
-    color: #00ffcc;
+    color: #28b3e5;
 }
 
 .tech-stack-section .section-header p {
@@ -1525,7 +1537,7 @@ tech stack section
 }
 
 .tech-item:hover {
-    color: #00ffcc;
+    color: #28b3e5;
     transform: scale(1.05);
 }
 
@@ -1760,7 +1772,7 @@ body {
 
 .quote-mark {
     font-size: 2.2rem;
-    color:#00ffcc;
+    color:#28b3e5;
     line-height: 1;
     margin-bottom: 12px;
     font-weight: 400;
@@ -1933,7 +1945,7 @@ body {
 }
 
 .section-title .highlight {
-    color: #00ffcc;
+    color: #28b3e5;
 }
 
 .section-description {
@@ -2052,7 +2064,7 @@ body {
 .cta-link {
     display: inline-flex;
     align-items: center;
-    color: #00ffcc;
+    color: #28b3e5;
     text-decoration: none;
     font-size: 13px;
     margin-top: 20px;
@@ -2159,13 +2171,13 @@ body {
 }
 
 .cta-text .highlight {
-    color: #00ffcc;
+    color: #28b3e5;
     font-weight: 400;
 }
 
 .cta-button {
     display: inline-block;
-    background-color: #026149;
+    background-color: #28b3e5;
     color: #ffffff;
     padding: 14px 28px;
     border-radius: 6px;
@@ -2299,7 +2311,7 @@ contact
 }
 
 .contact-us .info span a {
-  color: #00ffcc;
+  color: #28b3e5;
   font-size: 14px;
   font-weight: 400;
   line-height: 25px;
@@ -2342,7 +2354,7 @@ form#contact input::placeholder {
 
 form#contact button {
   display: inline-block;
-  background-color: #00ffcc;
+  background-color: #28b3e5;
   font-size: 15px;
   font-weight: 400;
   color: #fff;

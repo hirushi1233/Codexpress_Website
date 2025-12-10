@@ -278,7 +278,7 @@
                         <li class="scroll-to-section">
                             <div class="main-red-button-hover">
                                 <a href="https://wa.me/94777674308" target="_blank">
-                                    <i class="fab fa-whatsapp"></i> Schedule a Call / Chat
+                                    <i class="fab fa-whatsapp"></i> Schedule a Call
                                 </a>
                             </div>
                         </li>
@@ -358,7 +358,7 @@
 
     .dropdown-menu li a:hover {
         background: #f8f9fa;
-        color: #00ffcc;
+        color: #28b3e5;
         padding-left: 25px;
     }
 
@@ -421,7 +421,7 @@
     }
 
     .mega-sidebar p a {
-        color: #00ffcc;
+        color: #28b3e5;
         text-decoration: underline;
     }
 
@@ -444,7 +444,7 @@
     }
 
     .sidebar-links li a:hover {
-        color: #00ffcc;
+        color: #28b3e5;
     }
 
     .sidebar-case-study {
@@ -460,7 +460,7 @@
     }
 
     .sidebar-case-study a {
-        color: #00ffcc;
+        color: #28b3e5;
         text-decoration: underline;
     }
 
@@ -487,7 +487,7 @@
     }
 
     .mega-column h4 .bullet {
-        color: #00ffcc;
+        color: #28b3e5;
         margin-right: 8px;
         font-size: 8px;
     }
@@ -512,7 +512,7 @@
     }
 
     .mega-column ul li a:hover {
-        color: #00ffcc;
+        color: #28b3e5;
         transform: translateX(5px);
     }
 
@@ -524,7 +524,7 @@
     }
 
     .view-all-link {
-        color: #00ffcc;
+        color: #28b3e5;
         font-weight: 600;
         font-size: 15px;
         text-decoration: none;
@@ -532,7 +532,7 @@
     }
 
     .view-all-link:hover {
-        color: #00ccaa;
+        color: #28b3e5;
     }
 
     /* Mobile Responsive */
