@@ -13,6 +13,8 @@ class DatabaseSeeder extends Seeder
             CoursesSeeder::class,
             AdminSeeder::class,
             SolutionsSeeder::class,
+            IndustriesSeeder::class,
+            CareersSeeder::class,
         ]);
     }
 }

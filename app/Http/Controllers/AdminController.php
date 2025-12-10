@@ -141,56 +141,95 @@ class AdminController extends Controller
         DB::table('industries')->insert([
             'name' => $request->name,
             'description' => $request->description,
+            'icon_url' => $request->icon_url,          // optional
+            'icon_class' => $request->icon_class ?? '', // optional
+            'category' => $request->category,          // PRIMARY INDUSTRIES / TECH & SERVICES / EMERGING SECTORS
+            'order' => $request->order ?? 0,
+            'is_active' => $request->is_active ?? true,
             'created_at' => now(),
             'updated_at' => now()
         ]);
+
         return back()->with('success', 'Industry added!');
     }
 
+    /**
+     * Update an existing industry
+     */
     public function updateIndustry(Request $request, $id)
     {
         DB::table('industries')->where('id', $id)->update([
             'name' => $request->name,
             'description' => $request->description,
+            'icon_url' => $request->icon_url,          // optional
+            'icon_class' => $request->icon_class ?? '', // optional
+            'category' => $request->category,
+            'order' => $request->order ?? 0,
+            'is_active' => $request->is_active ?? true,
             'updated_at' => now()
         ]);
+
         return back()->with('success', 'Industry updated!');
     }
 
+    /**
+     * Delete an industry
+     */
     public function deleteIndustry($id)
     {
         DB::table('industries')->where('id', $id)->delete();
+
         return back()->with('success', 'Industry deleted!');
     }
-
     // ========== CAREERS ==========
+    /**
+     * Add a new career
+     */
     public function addCareer(Request $request)
     {
         DB::table('careers')->insert([
-            'title' => $request->title,
+            'name' => $request->name,
             'description' => $request->description,
+            'icon_url' => $request->icon_url,          // optional
+            'icon_class' => $request->icon_class ?? '', // optional
+            'category' => $request->category,          // OPEN POSITIONS
+            'order' => $request->order ?? 0,
+            'is_active' => $request->is_active ?? true,
             'created_at' => now(),
             'updated_at' => now()
         ]);
+
         return back()->with('success', 'Career added!');
     }
 
+    /**
+     * Update an existing career
+     */
     public function updateCareer(Request $request, $id)
     {
         DB::table('careers')->where('id', $id)->update([
-            'title' => $request->title,
+            'name' => $request->name,
             'description' => $request->description,
+            'icon_url' => $request->icon_url,          // optional
+            'icon_class' => $request->icon_class ?? '', // optional
+            'category' => $request->category,
+            'order' => $request->order ?? 0,
+            'is_active' => $request->is_active ?? true,
             'updated_at' => now()
         ]);
+
         return back()->with('success', 'Career updated!');
     }
 
+    /**
+     * Delete a career
+     */
     public function deleteCareer($id)
     {
         DB::table('careers')->where('id', $id)->delete();
+
         return back()->with('success', 'Career deleted!');
     }
-
     // ========== COURSES ==========
     public function addCourse(Request $request)
     {
@@ -218,4 +257,6 @@ class AdminController extends Controller
         DB::table('courses')->where('id', $id)->delete();
         return back()->with('success', 'Course deleted!');
     }
+
+
 }

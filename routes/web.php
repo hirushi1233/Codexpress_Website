@@ -8,6 +8,7 @@ use App\Http\Controllers\CareersController;
 use App\Http\Controllers\SolutionsController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CoursesController;
+use App\Http\Controllers\IndustriesController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
@@ -43,7 +44,7 @@ Route::get('/solutions', [SolutionsController::class, 'index'])->name('solutions
 Route::get('/courses', [CoursesController::class, 'index'])->name('courses.index');
 
 
-// Add industries route
+//  industries route
 Route::get('/industries', [IndustriesController::class, 'index'])->name('industries.index');
 
 
