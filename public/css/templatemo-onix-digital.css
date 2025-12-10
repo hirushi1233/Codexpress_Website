@@ -250,7 +250,6 @@ body {
 
 
 .main-red-button-hover a {
-  display: inline-block;
     display: inline-flex;              /* enables flexbox layout */
     align-items: center;               /* centers icon + text vertically */
     justify-content: center;           /* centers them horizontally */
