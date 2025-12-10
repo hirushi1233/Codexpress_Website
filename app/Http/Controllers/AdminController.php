@@ -129,6 +129,7 @@ class AdminController extends Controller
         return back()->with('success', 'Technology updated!');
 
     }
+
     public function deleteTechnology($id)
     {
         DB::table('technologies')->where('id', $id)->delete();
@@ -182,6 +183,7 @@ class AdminController extends Controller
         return back()->with('success', 'Industry deleted!');
     }
     // ========== CAREERS ==========
+
     /**
      * Add a new career
      */
@@ -230,33 +232,52 @@ class AdminController extends Controller
 
         return back()->with('success', 'Career deleted!');
     }
+
     // ========== COURSES ==========
     public function addCourse(Request $request)
     {
+        // Convert content from textarea (line by line) to JSON array
+        $content = !empty($request->content)
+            ? array_values(array_filter(array_map('trim', explode("\n", $request->content))))
+            : [];
+
         DB::table('courses')->insert([
             'name' => $request->name,
             'description' => $request->description,
+            'icon_url' => $request->icon_url,
+            'content' => json_encode($content), // Store as JSON
+            'projects' => $request->projects,
+            'is_active' => true,
+            'order' => DB::table('courses')->max('order') + 1,
             'created_at' => now(),
             'updated_at' => now()
         ]);
-        return back()->with('success', 'Course added!');
+
+        return back()->with('success', 'Course added successfully!');
     }
 
     public function updateCourse(Request $request, $id)
     {
+        // Convert content from textarea to JSON array
+        $content = !empty($request->content)
+            ? array_values(array_filter(array_map('trim', explode("\n", $request->content))))
+            : [];
+
         DB::table('courses')->where('id', $id)->update([
             'name' => $request->name,
             'description' => $request->description,
+            'icon_url' => $request->icon_url,
+            'content' => json_encode($content), // Store as JSON
+            'projects' => $request->projects,
             'updated_at' => now()
         ]);
-        return back()->with('success', 'Course updated!');
+
+        return back()->with('success', 'Course updated successfully!');
     }
 
     public function deleteCourse($id)
     {
         DB::table('courses')->where('id', $id)->delete();
-        return back()->with('success', 'Course deleted!');
+        return back()->with('success', 'Course deleted successfully!');
     }
-
-
 }

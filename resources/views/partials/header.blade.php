@@ -8,7 +8,7 @@
                 <!--    <a href="index.html" class="logo">
                         <img src="assets/images/lg.png" style="width:150px; height:auto;">
                     </a> --><a href="index.html" class="logo" style="font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 700; text-decoration: none;">
-                        <span style="color: #00ffcc; font-weight: 900; ">Code</span>
+                        <span style="color: #28b3e5; font-weight: 900; ">Code</span>
                         <span style="color: #000000 ; font-weight: 900;">
         <span style="font-size: 36px;">X</span>press
     </span>
@@ -275,7 +275,13 @@
                             <a href="{{ route('courses.index') }}" style="color: #1a1a1a; font-weight: 700;">Courses</a>
                         </li>
 
-                        <li class="scroll-to-section"><div class="main-red-button-hover"><a href="#contact">Schedule a Call</a></div></li>
+                        <li class="scroll-to-section">
+                            <div class="main-red-button-hover">
+                                <a href="https://wa.me/94777674308" target="_blank">
+                                    <i class="fab fa-whatsapp"></i> Schedule a Call / Chat
+                                </a>
+                            </div>
+                        </li>
                     </ul>
                     <a class='menu-trigger'>
                         <span>Menu</span>

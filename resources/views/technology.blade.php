@@ -53,29 +53,48 @@
     <style>
         /* Hero Section Styles */
         .technology-hero {
-            background: #023c2d;
-            padding: 80px 20px;
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            padding: 100px 20px;
             text-align: center;
             color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .technology-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(14, 183, 234, 0.15) 0%, transparent 50%);
         }
 
         .hero-title {
             font-size: 3rem;
             margin-bottom: 20px;
-            font-weight: 700;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            position: relative;
+            z-index: 1;
+            color: #ffffff;
         }
 
         .hero-description {
             font-size: 1.25rem;
             max-width: 700px;
             margin: 0 auto;
-            color: #ffffff;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.8;
+            position: relative;
+            z-index: 1;
         }
 
         /* Technologies Section Styles */
         .technologies-section {
             padding: 80px 20px;
-            background: #f8f9fa;
+            background: #ffffff;
         }
 
         .tech-container {
@@ -85,33 +104,61 @@
 
         .technologies-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
         }
 
         /* Tech Card Styles */
         .tech-card {
             background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
+            padding: 40px 30px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tech-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: #0eb7ea;
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .tech-card:hover::before {
+            transform: scaleX(1);
         }
 
         .tech-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+            transform: translateY(-12px);
+            box-shadow: 0 20px 60px rgba(14, 183, 234, 0.2);
+            border-color: #0eb7ea;
         }
 
         /* Tech Icon Base Styles */
         .tech-icon {
-            width: 60px;
-            height: 60px;
-            border-radius: 12px;
+            width: 75px;
+            height: 75px;
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 20px;
+            margin: 0 auto 20px;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .tech-card:hover .tech-icon {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 12px 32px rgba(14, 183, 234, 0.3);
         }
 
         .tech-icon-text {
@@ -124,7 +171,12 @@
             color: #1a1a1a;
         }
 
-        /* Individual Tech Icon Gradients */
+        .tech-svg {
+            width: 50px;
+            height: 50px;
+        }
+
+        /* Individual Tech Icon Gradients - Keep Original Colors */
         .tech-icon-dotnet {
             background: linear-gradient(135deg, #512BD4, #7B3FF2);
         }
@@ -216,49 +268,116 @@
         /* Tech Card Text Styles */
         .tech-title {
             font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: #1a1a1a;
+            margin-bottom: 12px;
+            color: #000000;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            transition: color 0.3s ease;
+        }
+
+        .tech-card:hover .tech-title {
+            color: #0eb7ea;
         }
 
         .tech-description {
-            color: #666;
-            line-height: 1.6;
+            color: #666666;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        /* Section Header */
+        .section-header {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #000000;
+            margin-bottom: 50px;
+            text-align: center;
+            position: relative;
+            letter-spacing: -0.02em;
+        }
+
+        .section-header::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #0eb7ea;
+            border-radius: 2px;
         }
 
         /* CTA Section Styles */
         .cta-section {
-            background: #023c2d;
-            padding: 60px 20px;
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            padding: 80px 20px;
             text-align: center;
             color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(14, 183, 234, 0.15) 0%, transparent 50%);
         }
 
         .cta-title {
             font-size: 2.5rem;
             margin-bottom: 20px;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            position: relative;
+            z-index: 1;
+            color: #ffffff;
         }
 
         .cta-description {
             font-size: 1.25rem;
-            color: white;
-            margin-bottom: 30px;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 35px;
+            line-height: 1.8;
+            position: relative;
+            z-index: 1;
         }
 
         .cta-button {
             display: inline-block;
-            background: white;
-            color: #667eea;
-            padding: 15px 40px;
-            border-radius: 30px;
+            background: #0eb7ea;
+            color: #ffffff;
+            padding: 16px 45px;
+            border-radius: 50px;
             font-weight: 700;
             text-decoration: none;
-            transition: transform 0.3s;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            box-shadow: 0 10px 30px rgba(14, 183, 234, 0.3);
+            font-size: 1.1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(14, 183, 234, 0.5);
+            background: #ffffff;
+            color: #000000;
         }
 
         /* Responsive Styles */
         @media (max-width: 768px) {
+            .technology-hero {
+                padding: 70px 20px;
+            }
+
             .technologies-grid {
                 grid-template-columns: 1fr !important;
+                gap: 25px;
             }
 
             .hero-title {
@@ -269,74 +388,28 @@
                 font-size: 1rem !important;
             }
 
-        <style>
-        .tech-svg {
-            width: 50px;
-            height: 50px;
-        }
-
-            .tech-icon {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-bottom: 15px;
+            .section-header {
+                font-size: 2rem;
+                margin-bottom: 35px;
             }
 
             .tech-card {
-                background: rgba(255, 255, 255, 0.08);
-                border-radius: 20px;
-                padding: 28px;
-                text-align: center;
-                backdrop-filter: blur(12px);
-                border: 1px solid rgba(255, 255, 255, 0.18);
-                transition: all 0.35s ease;
-                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-                transform: translateY(0);
-                position: relative;
-                overflow: hidden;
+                padding: 30px 25px;
             }
 
-            /* Hover Effect */
-            .tech-card:hover {
-                transform: translateY(-8px) scale(1.03);
-                border-color: rgba(255, 255, 255, 0.45);
-                background: rgba(255, 255, 255, 0.18);
-                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+            .cta-section {
+                padding: 60px 20px;
             }
 
-            .tech-card {
-                position: relative;
-                transition: 0.3s ease-in-out;
+            .cta-title {
+                font-size: 2rem;
             }
 
-            /* Hidden line */
-            .tech-card::after {
-                content: "";
-                position: absolute;
-                left: 50%;
-                bottom: 0;
-                width: 0;
-                height: 3px;
-                background: #0dcaf0;
-                transition: 0.3s ease;
-                transform: translateX(-50%);
+            .cta-button {
+                padding: 14px 35px;
+                font-size: 1rem;
             }
-
-            /* Show line on hover */
-            .tech-card:hover::after {
-                width: 80%;
-            }
-
-            @keyframes glowMove {
-                0% { background-position: 0% 50%; }
-                50% { background-position: 100% 50%; }
-                100% { background-position: 0% 50%; }
-            }
-
-
-
         }
     </style>
-
 
 @endsection

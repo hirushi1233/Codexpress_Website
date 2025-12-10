@@ -21,9 +21,11 @@ class Courses extends Model
     ];
 
     protected $casts = [
-        'content' => 'array',
-        'is_active' => 'boolean'
+        'content' => 'array',  // Automatically convert JSON to array
+        'is_active' => 'boolean',
+        'order' => 'integer'
     ];
+
 
     // Scope to get only active courses
     public function scopeActive($query)
@@ -37,3 +39,5 @@ class Courses extends Model
         return $query->orderBy('order', 'asc');
     }
 }
+
+
