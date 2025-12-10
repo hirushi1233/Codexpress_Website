@@ -31,7 +31,7 @@
                                 {{ $course->description }}
                             </p>
 
-                            <!-- Course Content Toggle -->
+                            <!-- Courses Content Toggle -->
                             <button class="toggle-content-btn" onclick="toggleCourseContent({{ $course->id }})">
                                 <span id="toggle-text-{{ $course->id }}">View Course Content</span>
                                 <svg id="toggle-icon-{{ $course->id }}" class="toggle-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
@@ -39,7 +39,7 @@
                                 </svg>
                             </button>
 
-                            <!-- Course Content (Hidden by default) -->
+                            <!-- Courses Content (Hidden by default) -->
                             <div class="course-content" id="course-content-{{ $course->id }}">
                                 <h4 class="content-heading">Course Content:</h4>
                                 <ul class="content-list">
@@ -89,11 +89,11 @@
 
             if (content.classList.contains('active')) {
                 content.classList.remove('active');
-                toggleText.textContent = 'View Course Content';
+                toggleText.textContent = 'View Courses Content';
                 toggleIcon.style.transform = 'rotate(0deg)';
             } else {
                 content.classList.add('active');
-                toggleText.textContent = 'Hide Course Content';
+                toggleText.textContent = 'Hide Courses Content';
                 toggleIcon.style.transform = 'rotate(180deg)';
             }
         }
@@ -139,7 +139,7 @@
             gap: 30px;
         }
 
-        /* Course Card Styles */
+        /* Courses Card Styles */
         .course-card {
             background: white;
             padding: 30px;
@@ -178,7 +178,7 @@
             font-size: 2.5rem;
         }
 
-        /* Course Card Text Styles */
+        /* Courses Card Text Styles */
         .course-title {
             font-size: 1.5rem;
             margin-bottom: 15px;
@@ -217,7 +217,7 @@
             transition: transform 0.3s ease;
         }
 
-        /* Course Content Styles */
+        /* Courses Content Styles */
         .course-content {
             max-height: 0;
             overflow: hidden;

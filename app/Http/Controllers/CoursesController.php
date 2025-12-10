@@ -43,7 +43,7 @@ class CoursesController extends Controller
         Courses::create($validated);
 
         return redirect()->route('courses.index')
-            ->with('success', 'Course created successfully.');
+            ->with('success', 'Courses created successfully.');
     }
 
     /**
@@ -81,7 +81,7 @@ class CoursesController extends Controller
         $course->update($validated);
 
         return redirect()->route('courses.index')
-            ->with('success', 'Course updated successfully.');
+            ->with('success', 'Courses updated successfully.');
     }
 
     /**
@@ -92,6 +92,6 @@ class CoursesController extends Controller
         $course->delete();
 
         return redirect()->route('courses.index')
-            ->with('success', 'Course deleted successfully.');
+            ->with('success', 'Courses deleted successfully.');
     }
 }

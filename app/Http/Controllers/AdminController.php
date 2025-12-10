@@ -3,7 +3,260 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
+    // Show login page
+    public function login()
+    {
+        return view('admin.login');
+    }
+
+    // Handle login
+    public function loginPost(Request $request)
+    {
+        $admin = DB::table('admins')
+            ->where('username', $request->username)
+            ->first();
+
+        if ($admin && Hash::check($request->password, $admin->password)) {
+            session(['admin_logged_in' => true]);
+            return redirect('/secret-admin-panel');
+        }
+
+        return back()->with('error', 'Invalid credentials');
+    }
+
+    // Show dashboard
+    public function dashboard()
+    {
+        if (!session('admin_logged_in')) {
+            return redirect('/secret-admin-login');
+        }
+
+        $solutions = DB::table('solutions')->get();
+        $technologies = DB::table('technologies')->get();
+        $industries = DB::table('industries')->get();
+        $careers = DB::table('careers')->get();
+        $courses = DB::table('courses')->get();
+
+        return view('admin.dashboard', compact('solutions', 'technologies', 'industries', 'careers', 'courses'));
+    }
+
+    // Logout
+    public function logout()
+    {
+        session()->forget('admin_logged_in');
+        return redirect('/');
+    }
+
+    // ========== SOLUTIONS ==========
+
+    /**
+     * Add a new solution
+     */
+    public function addSolution(Request $request)
+    {
+        DB::table('solutions')->insert([
+            'name' => $request->name,
+            'description' => $request->description,
+            'icon_url' => $request->icon_url,          // optional
+            'icon_class' => $request->icon_class ?? '', // optional
+            'category' => $request->category,          // TOP SOLUTIONS / ENTERPRISE FOCUSED
+            'order' => $request->order ?? 0,
+            'is_active' => $request->is_active ?? true,
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+
+        return back()->with('success', 'Solution added!');
+    }
+
+    /**
+     * Update an existing solution
+     */
+    public function updateSolution(Request $request, $id)
+    {
+        DB::table('solutions')->where('id', $id)->update([
+            'name' => $request->name,
+            'description' => $request->description,
+            'icon_url' => $request->icon_url,          // optional
+            'icon_class' => $request->icon_class ?? '', // optional
+            'category' => $request->category,
+            'order' => $request->order ?? 0,
+            'is_active' => $request->is_active ?? true,
+            'updated_at' => now()
+        ]);
+
+        return back()->with('success', 'Solution updated!');
+    }
+
+    /**
+     * Delete a solution
+     */
+    public function deleteSolution($id)
+    {
+        DB::table('solutions')->where('id', $id)->delete();
+
+        return back()->with('success', 'Solution deleted!');
+    }
+
+    // ========== TECHNOLOGIES ==========
+    public function addTechnology(Request $request)
+    {
+        DB::table('technologies')->insert([
+            'name' => $request->name,
+            'description' => $request->description,
+            'icon_url' => $request->icon_url,  // ADD THIS
+            'icon_class' => $request->icon_class ?? '',  // ADD THIS (optional)
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+        return back()->with('success', 'Technology added!');
+    }
+
+    public function updateTechnology(Request $request, $id)
+    {
+        DB::table('technologies')->where('id', $id)->update([
+            'name' => $request->name,
+            'description' => $request->description,
+            'icon_url' => $request->icon_url,  // ADD THIS
+            'icon_class' => $request->icon_class ?? '',  // ADD THIS (optional)
+            'updated_at' => now()
+        ]);
+        return back()->with('success', 'Technology updated!');
+
+    }
+    public function deleteTechnology($id)
+    {
+        DB::table('technologies')->where('id', $id)->delete();
+        return back()->with('success', 'Technology deleted!');
+    }
+
+    // ========== INDUSTRIES ==========
+    public function addIndustry(Request $request)
+    {
+        DB::table('industries')->insert([
+            'name' => $request->name,
+            'description' => $request->description,
+            'icon_url' => $request->icon_url,          // optional
+            'icon_class' => $request->icon_class ?? '', // optional
+            'category' => $request->category,          // PRIMARY INDUSTRIES / TECH & SERVICES / EMERGING SECTORS
+            'order' => $request->order ?? 0,
+            'is_active' => $request->is_active ?? true,
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+
+        return back()->with('success', 'Industry added!');
+    }
+
+    /**
+     * Update an existing industry
+     */
+    public function updateIndustry(Request $request, $id)
+    {
+        DB::table('industries')->where('id', $id)->update([
+            'name' => $request->name,
+            'description' => $request->description,
+            'icon_url' => $request->icon_url,          // optional
+            'icon_class' => $request->icon_class ?? '', // optional
+            'category' => $request->category,
+            'order' => $request->order ?? 0,
+            'is_active' => $request->is_active ?? true,
+            'updated_at' => now()
+        ]);
+
+        return back()->with('success', 'Industry updated!');
+    }
+
+    /**
+     * Delete an industry
+     */
+    public function deleteIndustry($id)
+    {
+        DB::table('industries')->where('id', $id)->delete();
+
+        return back()->with('success', 'Industry deleted!');
+    }
+    // ========== CAREERS ==========
+    /**
+     * Add a new career
+     */
+    public function addCareer(Request $request)
+    {
+        DB::table('careers')->insert([
+            'name' => $request->name,
+            'description' => $request->description,
+            'icon_url' => $request->icon_url,          // optional
+            'icon_class' => $request->icon_class ?? '', // optional
+            'category' => $request->category,          // OPEN POSITIONS
+            'order' => $request->order ?? 0,
+            'is_active' => $request->is_active ?? true,
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+
+        return back()->with('success', 'Career added!');
+    }
+
+    /**
+     * Update an existing career
+     */
+    public function updateCareer(Request $request, $id)
+    {
+        DB::table('careers')->where('id', $id)->update([
+            'name' => $request->name,
+            'description' => $request->description,
+            'icon_url' => $request->icon_url,          // optional
+            'icon_class' => $request->icon_class ?? '', // optional
+            'category' => $request->category,
+            'order' => $request->order ?? 0,
+            'is_active' => $request->is_active ?? true,
+            'updated_at' => now()
+        ]);
+
+        return back()->with('success', 'Career updated!');
+    }
+
+    /**
+     * Delete a career
+     */
+    public function deleteCareer($id)
+    {
+        DB::table('careers')->where('id', $id)->delete();
+
+        return back()->with('success', 'Career deleted!');
+    }
+    // ========== COURSES ==========
+    public function addCourse(Request $request)
+    {
+        DB::table('courses')->insert([
+            'name' => $request->name,
+            'description' => $request->description,
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+        return back()->with('success', 'Course added!');
+    }
+
+    public function updateCourse(Request $request, $id)
+    {
+        DB::table('courses')->where('id', $id)->update([
+            'name' => $request->name,
+            'description' => $request->description,
+            'updated_at' => now()
+        ]);
+        return back()->with('success', 'Course updated!');
+    }
+
+    public function deleteCourse($id)
+    {
+        DB::table('courses')->where('id', $id)->delete();
+        return back()->with('success', 'Course deleted!');
+    }
+
+
 }
