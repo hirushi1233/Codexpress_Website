@@ -38,7 +38,7 @@ Route::get('/careers', [CareersController::class, 'index'])->name('careers.index
 
 
 // solutions route
-Route::get('/solutions', [SolutionsController::class, 'index'])->name('solutions.index');
+Route::get('/solution', [SolutionsController::class, 'index'])->name('solution.index');
 
 //courses route
 Route::get('/courses', [CoursesController::class, 'index'])->name('courses.index');

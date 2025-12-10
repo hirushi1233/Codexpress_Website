@@ -8,7 +8,7 @@
                 <!--    <a href="index.html" class="logo">
                         <img src="assets/images/lg.png" style="width:150px; height:auto;">
                     </a> --><a href="index.html" class="logo" style="font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 700; text-decoration: none;">
-                        <span style="color: #00ffcc; font-weight: 900; ">Code</span>
+                        <span style="color: #0eb7ea; font-weight: 900; ">Code</span>
                         <span style="color: #000000 ; font-weight: 900;">
         <span style="font-size: 36px;">X</span>press
     </span>
@@ -24,7 +24,7 @@
                         <li class="scroll-to-section"><a href="/" style="color: #1a1a1a; font-weight: 700;">Home</a></li>
                         <!-- Solutions Mega Dropdown -->
                         <li class="scroll-to-section has-mega-dropdown">
-                            <a href="{{route('solutions.index')}}" style="color: #1a1a1a; font-weight: 700;">Solutions <i class="fa fa-angle-down"></i></a>
+                            <a href="{{route('solution.index')}}" style="color: #1a1a1a; font-weight: 700;">Solutions <i class="fa fa-angle-down"></i></a>
 
                             <div class="mega-dropdown-menu">
                                 <div class="mega-dropdown-container">
@@ -268,7 +268,16 @@
                             <a href="{{ route('courses.index') }}" style="color: #1a1a1a; font-weight: 700;">Courses</a>
                         </li>
 
-                        <li class="scroll-to-section"><div class="main-red-button-hover"><a href="#contact">Schedule a Call</a></div></li>
+{{--                        <li class="scroll-to-section"><div class="main-red-button-hover"><a href="#contact">Schedule a Call</a></div></li>--}}
+                        <li class="scroll-to-section">
+                            <div class="main-red-button-hover">
+                                <a href="https://wa.me/94777674308" target="_blank">
+                                    Schedule a Call / Chat
+                                </a>
+                            </div>
+                        </li>
+
+
                     </ul>
                     <a class='menu-trigger'>
                         <span>Menu</span>

@@ -4,8 +4,6 @@
 
 @section('content')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-
     <!-- main banner part
     <div class="main-banner" id="top">
         <div class="container">
@@ -157,7 +155,7 @@
                             </div>
                         </div>
                     </div> -->
-    <!--home -->
+                 <!--home -->
 
                     <!-- Slide 3 -->
                     <div class="item header-text">
@@ -204,8 +202,8 @@
                                     <i class="fab fa-whatsapp"></i> 077 767 4308
                                 </a>
 
-                            </div>
 
+                            </div>
                         </div>
                     </div>
                 </div>
