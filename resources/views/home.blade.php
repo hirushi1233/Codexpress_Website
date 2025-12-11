@@ -170,14 +170,14 @@
                                 <button class="green-button">Get Started</button>
                             </div>
                             <br>
-                            <div class="call-button">
-                                <a href="https://wa.me/94777674308" target="_blank" style="text-decoration:none;">
-                                    <i class="fab fa-whatsapp" style="color:#25D366;"></i>
-                                    <span style="color:#001f3f; font-weight:bold;">077 767 4308</span>
-                                </a>
-
+                          <div class="call-button">
+                              <a href="tel:+94777674308" style="text-decoration:none;">
+                                  <i class="fas fa-phone" style="color:#28b3e5;"></i>
+                                  <span style="color:#001f3f; font-weight:bold;">077 767 4308</span>
+                              </a>
 
                             </div>
+
                         </div>
                     </div>
 
@@ -194,18 +194,18 @@
                             <div class="main-blue-button-hover">
                                 <a href="#portfolio">
                                 <button class="green-button">View Our Work</button>
-                            </div>
-
-                            <br>
-                            <div class="call-button">
-                                <a href="https://wa.me/94777674308" target="_blank" style="text-decoration:none;">
-                                    <i class="fab fa-whatsapp" style="color:#25D366;"></i>
-                                    <span style="color:#001f3f; font-weight:bold;">077 767 4308</span>
                                 </a>
+                            <br>
+                           <div class="call-button">
+                               <br>
+                               <a href="tel:+94777674308" style="text-decoration:none;">
+                                   <i class="fas fa-phone" style="color:#28b3e5;"></i>
+                                   <span style="color:#001f3f; font-weight:bold;">077 767 4308</span>
+                               </a>
 
 
                             </div>
-
+                            </div>
                         </div>
                     </div>
                 </div>
