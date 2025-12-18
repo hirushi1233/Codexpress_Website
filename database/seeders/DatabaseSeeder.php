@@ -15,6 +15,8 @@ class DatabaseSeeder extends Seeder
             SolutionsSeeder::class,
             IndustriesSeeder::class,
             CareersSeeder::class,
+            ProjectsSeeder::class,
+
         ]);
     }
 }

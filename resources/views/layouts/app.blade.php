@@ -116,6 +116,19 @@
             updateSlider();
         }, 100);
     });
+
+
+        function toggleChatBox() {
+        const chatBox = document.getElementById('chatBox');
+        chatBox.style.display = (chatBox.style.display === "flex") ? "none" : "flex";
+    }
+
+
+
+//form
+
+
+
 </script>
 
 </body>

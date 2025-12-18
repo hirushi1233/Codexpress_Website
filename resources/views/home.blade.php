@@ -450,7 +450,8 @@
     </div>
 
 
-    <!--client review -->
+
+<!-- client review -->
     <div class="client-reviews-section">
         <div class="hero-content">
             <div class="hero-image">
@@ -458,7 +459,7 @@
             </div>
 
             <div class="hero-text">
-                <h1>“Our success is measured by client satisfaction — and their reviews prove it.”</h1>
+                <h1>"Our success is measured by client satisfaction — and their reviews prove it."</h1>
                 <p>1,200+ projects executed successfully and an average relationship of over 3 years.</p>
                 <a href="#" class="cta-link">
                     Our greatest hits
@@ -468,80 +469,128 @@
         </div>
 
         <div class="reviews-grid">
-            <!-- Client 1 -->
-            <div class="review-card">
-                <div class="card-header">
-                    <div class="company-logo">
-                        <div class="logo-placeholder">Kasun Perera</div>
-                    </div>
-                    <div class="arrow-icon">→</div>
-                </div>
-                <div class="quote-mark">"</div>
-                <p class="review-text">CodeXpress delivered exactly what we needed. Their web design skills are top-notch and they completed our project on time.</p>
-                <div class="client-info">
-                   <!-- <div class="client-name">Kasun Perera</div>-->
-                    <div class="client-title">CEO, TechStart Solutions</div>
-                </div>
-            </div>
+            <!-- Navigation Buttons -->
+            <button class="carousel-nav prev" onclick="scrollCarousel('prev')">‹</button>
+            <button class="carousel-nav next" onclick="scrollCarousel('next')">›</button>
 
-            <!-- Client 2 -->
-            <div class="review-card">
-                <div class="card-header">
-                    <div class="company-logo">
-                        <div class="logo-placeholder">Thilina Jayasinghe</div>
-                    </div>
-                    <div class="arrow-icon">→</div>
-                </div>
-                <div class="quote-mark">"</div>
-                <p class="review-text">Excellent work from CodeXpress web solutions. They understood our requirements and delivered a modern, responsive website.</p>
-                <div class="client-info">
-                   <!-- <div class="client-name">Thilina Jayasinghe</div>-->
-                    <div class="client-title">Founder, Wilson Enterprises</div>
-                </div>
-            </div>
+            <!-- Cards Container -->
+            <div class="reviews-grid-inner" id="reviewsCarousel">
 
-            <!-- Client 3 -->
-            <div class="review-card">
-                <div class="card-header">
-                    <div class="company-logo">
-                        <div class="logo-placeholder">Priyanka Wijesinghe</div>
-                    </div>
-                    <div class="arrow-icon">→</div>
-                </div>
-                <div class="quote-mark">"</div>
-                <p class="review-text">Very satisfied with CodeXpress's web design services. They were responsive, creative, and delivered quality work within budget.</p>
-                <div class="client-info">
-                   <!-- <div class="client-name">Priyanka Wijesinghe</div>-->
-                    <div class="client-title">Manager, GreenTech Labs</div>
-                </div>
-            </div>
+                @forelse($approvedReviews as $review)
+                    <div class="review-card">
+                        <div class="card-header">
+                            <div class="company-logo">
+                                <div class="logo-placeholder">
+                                    {{ strtoupper(substr($review->name, 0, 1)) }}
+                                </div>
+                            </div>
+                            <div class="arrow-icon">→</div>
+                        </div>
 
-            <!-- Client 4 -->
-            <div class="review-card">
-                <div class="card-header">
-                    <div class="company-logo">
-                        <div class="logo-placeholder">Nimali Fernando</div>
+                        <div class="quote-mark">"</div>
+
+                        <p class="review-text">
+                            {{ $review->message }}
+                        </p>
+
+                        <div class="client-info">
+                            <div class="client-name">
+                                {{ $review->name }}
+                            </div>
+                            <div class="client-title">
+                                {{ $review->title }}
+                                @if($review->company)
+                                    , {{ $review->company }}
+                                @endif
+                            </div>
+                        </div>
                     </div>
-                    <div class="arrow-icon">→</div>
-                </div>
-                <div class="quote-mark">"</div>
-                <p class="review-text">Professional service and great communication throughout. CodeXpress created a beautiful website that perfectly represents our brand.</p>
-                <div class="client-info">
-                   <!-- <div class="client-name">Nimali Fernando</div>-->
-                    <div class="client-title">Marketing Director, Bloom & Co</div>
-                </div>
+                @empty
+                    <p>No reviews yet.</p>
+                @endforelse
+
             </div>
         </div>
     </div>
 
+            <script>
+        let currentScroll = 0;
+        const cardWidth = 320; // 300px width + 20px gap
 
+        function scrollCarousel(direction) {
+            const carousel = document.getElementById('reviewsCarousel');
+            const maxScroll = carousel.scrollWidth - carousel.parentElement.offsetWidth + 120;
 
-    <!-- our latest insight -->
+            if (direction === 'next') {
+                currentScroll = Math.min(currentScroll + cardWidth, maxScroll);
+            } else {
+                currentScroll = Math.max(currentScroll - cardWidth, 0);
+            }
+
+            carousel.style.transform = `translateX(-${currentScroll}px)`;
+        }
+    </script>
+
+    <!-- Submit Review + Map Section -->
+    <div class="submit-review-section">
+        <div class="submit-review-layout">
+
+            <!-- LEFT: Map -->
+            <div class="map-section">
+                <iframe
+                    src="https://www.google.com/maps?q=Colombo,Sri%20Lanka&output=embed"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <!-- RIGHT: Your existing form (UNCHANGED) -->
+            <div class="submit-review-container">
+                <h2>Share Your Experience</h2>
+                <p>Your feedback helps us improve and grow.</p>
+
+                <form action="{{ route('reviews.store') }}" method="POST">
+                    @csrf
+
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" name="name" placeholder="Your name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Job Title / Position</label>
+                        <input type="text" name="title" placeholder="CEO, Founder, Manager" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Company (optional)</label>
+                        <input type="text" name="company" placeholder="Company name">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Your Review</label>
+                        <textarea name="message" rows="4" placeholder="Write your experience with us..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        Submit Review →
+                    </button>
+
+                    <p class="form-note">
+                        Reviews are published after admin approval.
+                    </p>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- our latest insight
     <div id="portfolio" class="our-portfolio section">
         <div class="container">
             <div class="portfolio-header">
                 <h2>Our latest insights</h2>
-               <!-- <a href="#" class="view-all">Over 1,100 articles on technology and talent</a> -->
+                <a href="#" class="view-all">Over 1,100 articles on technology and talent</a>
             </div>
         </div>
 
@@ -633,11 +682,11 @@
         </div>
     </div>
 
+-->
 
 
 
-
-    <!--contact-->
+    <!--contact
 
     <div id="contact" class="contact-us section">
         <div class="container">
@@ -648,10 +697,10 @@
                         <div id="map">
                             <iframe src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="360px" frameborder="0" style="border:0" allowfullscreen=""></iframe>
                         </div>
-                       <!--<div class="info">
+                       <div class="info">
                             <span><i class="fa fa-phone"></i> <a href="#">0777674308</a></span>
                             <span><i class="fa fa-envelope"></i> <a href="#">codexpressinfo12@gmail.com</a></span>
-                        </div> -->
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-5 align-self-center">
@@ -686,7 +735,7 @@
                     </form>
                 </div>
             </div>
-        </div>
+        </div> -->
 <br>
         <br>
 
@@ -725,6 +774,29 @@
     </div> -->
 
 
+        <!-- Floating Chat Button -->
+        <div class="chat-icon" onclick="toggleChatBox()">
+            <i class="fas fa-comments"></i>
+        </div>
+
+        <!-- Chat Box -->
+        <div class="chat-box" id="chatBox">
+            <div class="chat-header">
+                <span>Chat with Admin</span>
+                <button class="close-chat" onclick="toggleChatBox()">&times;</button>
+            </div>
+
+            <div class="chat-body">
+                <p class="bot-msg">👋 Hi! How can we help you today?</p>
+            </div>
+
+            <div class="chat-footer">
+                <input type="text" id="chatInput" placeholder="Type your message...">
+                <button class="send-btn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
 
 
 

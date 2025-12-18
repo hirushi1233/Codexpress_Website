@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Review;
 
 class HomeController extends Controller
 {
     public function index()
     {
+        // Services
         $services = [
             [
                 'icon' => 'service-icon-01.png',
@@ -31,6 +33,7 @@ class HomeController extends Controller
             ]
         ];
 
+        // Portfolio
         $portfolio = [
             [
                 'image' => 'portfolio-01.jpg',
@@ -54,7 +57,16 @@ class HomeController extends Controller
             ]
         ];
 
-        return view('home', compact('services', 'portfolio'));
+        // ✅ Approved client reviews (IMPORTANT PART)
+        $approvedReviews = Review::where('is_approved', true)
+            ->latest()
+            ->get();
+
+        return view('home', compact(
+            'services',
+            'portfolio',
+            'approvedReviews'
+        ));
     }
 
     public function submitContact(Request $request)
@@ -67,7 +79,9 @@ class HomeController extends Controller
             'message' => 'required|string'
         ]);
 
-        // For now just return success
-        return redirect()->back()->with('success', 'Thank you! We will get back to you soon.');
+        return redirect()->back()->with(
+            'success',
+            'Thank you! We will get back to you soon.'
+        );
     }
 }

@@ -1107,11 +1107,102 @@ Home
 ---------------------------------------------
 */
 
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+/* Floating Chat Icon */
+.chat-icon {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    background: #28b3e5;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 1050;
+    transition: 0.3s;
+}
+.chat-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Chat Box */
+.chat-box {
+    position: fixed;
+    bottom: 100px;
+    right: 25px;
+    width: 320px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 1050;
+}
+
+/* Header */
+.chat-header {
+    background: #28b3e5;
+    color: white;
+    padding: 12px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.close-chat {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Body */
+.chat-body {
+    padding: 10px;
+    height: 250px;
+    overflow-y: auto;
+    background: #f7f7f7;
+}
+.bot-msg {
+    background: #e3f7ff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    width: fit-content;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+.chat-footer {
+    display: flex;
+    border-top: 1px solid #eee;
+}
+.chat-footer input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    outline: none;
+}
+.send-btn {
+    background: #28b3e5;
+    border: none;
+    padding: 0 15px;
+    color: white;
+    cursor: pointer;
+}
+
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
@@ -1581,15 +1672,10 @@ tech stack section
 client review
 ---------------------------------------------
 */
-
-
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-
 }
 
 body {
@@ -1602,9 +1688,8 @@ body {
     max-width: 1400px;
     margin: 0 auto;
     position: relative;
-    margin-top: 250px; /* adjust value */
+    margin-top: 250px;
 }
-
 
 .hero-content {
     display: grid;
@@ -1661,28 +1746,34 @@ body {
     gap: 15px;
 }
 
+/* UPDATED REVIEWS GRID - CAROUSEL STYLE */
 .reviews-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
     position: absolute;
     bottom: -20px;
     left: 0;
     right: 0;
     z-index: 10;
+    overflow: hidden;
+    padding: 0 60px; /* Space for navigation arrows */
+}
+
+.reviews-grid-inner {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease-in-out;
+    overflow-x: hidden;
 }
 
 .review-card {
+    flex: 0 0 300px; /* Fixed width */
+    min-width: 300px;
     padding: 35px 30px;
-    border-right: none;
     position: relative;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     background: white;
     border-radius: 8px;
-    bottom: -20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     height: 400px;
-    width: 300px;
     transform: translateY(0);
 }
 
@@ -1710,7 +1801,6 @@ body {
     opacity: 1;
 }
 
-/* Add smooth transitions to card content */
 .review-card .review-text,
 .review-card .reviewer-name,
 .review-card .reviewer-title {
@@ -1725,15 +1815,56 @@ body {
     color: #333;
 }
 
-.review-card:last-child {
-    border-right: none;
-}
-/*
-.review-card:hover {
+/* NAVIGATION ARROWS */
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
     background: white;
-    transform: translateY(-8px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-} */
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #2d2d2d;
+    transition: all 0.3s ease;
+    z-index: 20;
+}
+
+.carousel-nav:hover {
+    background: #28b3e5;
+    color: white;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 20px rgba(40, 179, 229, 0.3);
+}
+
+.carousel-nav:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.carousel-nav.prev {
+    left: 0;
+}
+
+.carousel-nav.next {
+    right: 0;
+}
+
+.carousel-nav:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.carousel-nav:disabled:hover {
+    background: white;
+    color: #2d2d2d;
+    transform: translateY(-50%);
+}
 
 .card-header {
     display: flex;
@@ -1802,32 +1933,11 @@ body {
     color: #999;
 }
 
-/* Placeholder logos */
 .logo-placeholder {
     font-weight: 700;
     font-size: 1.1rem;
     color: #2d2d2d;
     letter-spacing: 0.5px;
-}
-
-@media (max-width: 1200px) {
-    .reviews-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .review-card {
-        border-right: none;
-        border-bottom: 1px solid #f0f0f0;
-    }
-
-    .review-card:nth-child(odd) {
-        border-right: 1px solid #f0f0f0;
-    }
-
-    .review-card:last-child,
-    .review-card:nth-last-child(2) {
-        border-bottom: none;
-    }
 }
 
 @media (max-width: 768px) {
@@ -1840,17 +1950,179 @@ body {
     }
 
     .reviews-grid {
-        grid-template-columns: 1fr;
+        padding: 0 50px;
     }
 
     .review-card {
-        border-right: none;
+        flex: 0 0 280px;
+        min-width: 280px;
     }
 
-    .review-card:nth-child(odd) {
-        border-right: none;
+    .carousel-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
     }
 }
+
+
+/*form */
+
+/* Submit Review Section */
+/* =========================
+   Submit Review Section
+   ========================= */
+
+.submit-review-section {
+    background: #fefefe;
+    padding: 80px 20px;
+    color: #000;
+}
+
+/* Grid layout */
+.submit-review-layout {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: stretch;
+}
+
+/* =========================
+   Map Section (LEFT)
+   ========================= */
+
+.map-section {
+    background: #141414;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.map-section iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    border: none;
+    filter: grayscale(1) contrast(1.1);
+}
+
+/* =========================
+   Form Container (RIGHT)
+   ========================= */
+
+.submit-review-container {
+    background: #141414;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Headings */
+.submit-review-container h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.submit-review-container p {
+    color: #aaa;
+    margin-bottom: 24px;
+}
+
+/* =========================
+   Form Elements
+   ========================= */
+
+.submit-review-container form .form-group {
+    margin-bottom: 18px;
+}
+
+.submit-review-container form label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Inputs */
+.submit-review-container form input,
+.submit-review-container form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    background: #1f1f1f;
+    color: #fff;
+    font-size: 14px;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.submit-review-container form input::placeholder,
+.submit-review-container form textarea::placeholder {
+    color: #777;
+}
+
+/* Focus state */
+.submit-review-container form input:focus,
+.submit-review-container form textarea:focus {
+    outline: none;
+    border-color: #28b3e5;
+    box-shadow: 0 0 0 2px rgba(40,179,229,0.25);
+}
+
+/* =========================
+   Submit Button
+   ========================= */
+
+.submit-review-container form .submit-btn {
+    margin-top: 16px;
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    background: #28b3e5;
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.submit-review-container form .submit-btn:hover {
+    background: #1fa2d1;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(40,179,229,0.35);
+}
+
+/* Note */
+.submit-review-container form .form-note {
+    margin-top: 14px;
+    font-size: 12px;
+    color: #777;
+    text-align: center;
+}
+
+/* =========================
+   Responsive Fix
+   ========================= */
+
+@media (max-width: 900px) {
+    .submit-review-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .map-section iframe {
+        min-height: 300px;
+    }
+}
+
+
+
 /*
 ---------------------------------------------
 Pricing - Ultra Modern Luxury Design
@@ -2244,6 +2516,172 @@ contact
 ---------------------------------------------
 */
 
+
+/* Feedback Form Styles
+#contact.contact-us {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.section-heading h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #2a2a2a;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+.section-heading h2 em {
+    font-style: normal;
+    color: #667eea;
+}
+
+.section-heading h2 span {
+    font-style: normal;
+    color: #764ba2;
+}
+
+#map {
+    margin-bottom: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+#map iframe {
+    border-radius: 15px;
+}
+
+/* Form Styles
+form#feedback {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+form#feedback fieldset {
+    border: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+form#feedback input[type="text"],
+form#feedback input[type="email"],
+form#feedback select,
+form#feedback textarea {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #2a2a2a;
+    background-color: #fafafa;
+    transition: all 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+form#feedback input[type="text"]:focus,
+form#feedback input[type="email"]:focus,
+form#feedback select:focus,
+form#feedback textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+form#feedback select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    padding-right: 40px;
+}
+
+form#feedback select option {
+    padding: 10px;
+}
+
+form#feedback textarea {
+    resize: vertical;
+    min-height: 120px;
+    font-family: inherit;
+}
+
+form#feedback textarea::placeholder,
+form#feedback input::placeholder,
+form#feedback select option[value=""] {
+    color: #999;
+}
+
+/* Submit Button
+.main-button {
+    width: 100%;
+    padding: 18px 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.main-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+.main-button:active {
+    transform: translateY(-1px);
+}
+
+/* Responsive Design
+@media (max-width: 991px) {
+    #contact.contact-us {
+        padding: 60px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    form#feedback {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .section-heading h2 {
+        font-size: 24px;
+    }
+
+    form#feedback {
+        padding: 25px 15px;
+    }
+
+    form#feedback input[type="text"],
+    form#feedback input[type="email"],
+    form#feedback select,
+    form#feedback textarea {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+
+    .main-button {
+        padding: 15px 25px;
+        font-size: 14px;
+    }
+}
 .contact-dec img {
   position: absolute;
   z-index: 1;
@@ -2369,6 +2807,8 @@ form#contact button {
 form#contact button:hover {
   background-color: #026149;
 }
+*/
+
 
 
 
@@ -2376,6 +2816,76 @@ form#contact button:hover {
 
 ---------------------------------------------
 
+      /* Your existing styles - add these to your stylesheet */
+  .success-notification {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #4caf50;
+      color: white;
+      padding: 20px 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      display: none;
+      z-index: 9999;
+      animation: slideInRight 0.5s ease-out;
+  }
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.new-review-highlight {
+    animation: highlightPulse 2s ease-in-out;
+    border: 2px solid #4caf50;
+}
+
+@keyframes highlightPulse {
+    0%, 100% { box-shadow: 0 0 0 rgba(76, 175, 80, 0); }
+    50% { box-shadow: 0 0 20px rgba(76, 175, 80, 0.6); }
+}
+
+/* Star rating styles */
+.rating-group {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.rating-group input[type="radio"] {
+    display: none;
+}
+
+.rating-group label {
+    font-size: 30px;
+    color: #ddd;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.rating-group label:hover,
+.rating-group label:hover ~ label,
+.rating-group input[type="radio"]:checked ~ label {
+    color: #ffc107;
+}
+
+.rating-stars {
+    color: #ffc107;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+
+
+
+/* footer */
 
 
 footer {

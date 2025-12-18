@@ -9,6 +9,13 @@ use App\Http\Controllers\SolutionsController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CoursesController;
 use App\Http\Controllers\IndustriesController;
+use App\Http\Controllers\ProjectsController;
+
+use App\Http\Controllers\ReviewController;
+
+
+
+
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
@@ -47,6 +54,13 @@ Route::get('/courses', [CoursesController::class, 'index'])->name('courses.index
 //  industries route
 Route::get('/industries', [IndustriesController::class, 'index'])->name('industries.index');
 
+//projects
+Route::get('/projects', [ProjectsController::class, 'index'])->name('projects.index');
+
+
+/* Frontend submit */
+Route::post('/submit-review', [ReviewController::class, 'store'])->name('review.store');
+Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
 
 
 //admin panel
@@ -81,3 +95,19 @@ Route::get('/admin/career/delete/{id}', [AdminController::class, 'deleteCareer']
 Route::post('/admin/course/add', [AdminController::class, 'addCourse']);
 Route::post('/admin/course/{id}', [AdminController::class, 'updateCourse']);
 Route::get('/admin/course/delete/{id}', [AdminController::class, 'deleteCourse']);
+
+
+
+// PROJECTS
+Route::post('/admin/project/add', [AdminController::class, 'addProject']);
+Route::post('/admin/project/{id}', [AdminController::class, 'updateProject']);
+Route::get('/admin/project/delete/{id}', [AdminController::class, 'deleteProject']);
+
+
+
+
+
+// Admin reviews
+Route::get('/secret-admin-panel/reviews', [AdminController::class, 'reviews']);
+Route::post('/secret-admin-panel/reviews/{id}/approve', [AdminController::class, 'approveReview']);
+Route::delete('/secret-admin-panel/reviews/{id}', [AdminController::class, 'deleteReview']);

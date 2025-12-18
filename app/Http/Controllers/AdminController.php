@@ -41,8 +41,10 @@ class AdminController extends Controller
         $industries = DB::table('industries')->get();
         $careers = DB::table('careers')->get();
         $courses = DB::table('courses')->get();
+        $projects = DB::table('projects')->get(); // <-- add this line
+        $reviews = DB::table('reviews')->get();
 
-        return view('admin.dashboard', compact('solutions', 'technologies', 'industries', 'careers', 'courses'));
+        return view('admin.dashboard', compact('solutions', 'technologies', 'industries', 'careers', 'courses', 'projects', 'reviews'   ));
     }
 
     // Logout
@@ -280,4 +282,120 @@ class AdminController extends Controller
         DB::table('courses')->where('id', $id)->delete();
         return back()->with('success', 'Course deleted successfully!');
     }
+
+    public function addProject(Request $request)
+    {
+        // Optional: validate input
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'description' => 'nullable|string',
+            'image' => 'nullable|string',
+            'category' => 'nullable|string|max:100',
+            'is_featured' => 'nullable|boolean',
+        ]);
+
+        DB::table('projects')->insert([
+            'title' => $request->title,
+            'description' => $request->description,
+            'image' => $request->image,
+            'category' => $request->category,
+            'is_featured' => $request->is_featured ? true : false,
+            'is_active' => true,
+            'order' => DB::table('projects')->max('order') + 1,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+
+        return back()->with('success', 'Project added successfully!');
+    }
+
+    // ========== UPDATE PROJECT ==========
+    public function updateProject(Request $request, $id)
+    {
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'description' => 'nullable|string',
+            'image' => 'nullable|string',
+            'category' => 'nullable|string|max:100',
+            'is_featured' => 'nullable|boolean',
+        ]);
+
+        DB::table('projects')->where('id', $id)->update([
+            'title' => $request->title,
+            'description' => $request->description,
+            'image' => $request->image,
+            'category' => $request->category,
+            'is_featured' => $request->is_featured ? true : false,
+            'updated_at' => now(),
+        ]);
+
+        return back()->with('success', 'Project updated successfully!');
+    }
+
+    // ========== DELETE PROJECT ==========
+    public function deleteProject($id)
+    {
+        DB::table('projects')->where('id', $id)->delete();
+        return back()->with('success', 'Project deleted successfully!');
+    }
+
+
+    // ========== REVIEWS / FEEDBACK ==========
+
+    /**
+     * Show reviews in admin dashboard
+     */
+    public function reviews()
+    {
+        if (!session('admin_logged_in')) {
+            return redirect('/secret-admin-login');
+        }
+
+        $reviews = DB::table('reviews')
+            ->orderBy('created_at', 'desc')
+            ->get();
+
+        return view('admin.feedback', compact('reviews'));
+    }
+
+    /**
+     * Approve a review
+     */
+    public function approveReview($id)
+    {
+        if (!session('admin_logged_in')) {
+            return redirect('/secret-admin-login');
+        }
+
+        DB::table('reviews')->where('id', $id)->update([
+            'is_approved' => true,
+            'updated_at' => now()
+        ]);
+
+        return back()->with('success', 'Review approved successfully!');
+    }
+
+    /**
+     * Delete a review
+     */
+    public function deleteReview($id)
+    {
+        if (!session('admin_logged_in')) {
+            return redirect('/secret-admin-login');
+        }
+
+        DB::table('reviews')->where('id', $id)->delete();
+
+        return back()->with('success', 'Review deleted successfully!');
+    }
+    public function approve($id)
+    {
+        $review = Review::findOrFail($id);
+        $review->is_approved = true;
+        $review->save();
+
+        return redirect()->back()->with('success', 'Review approved!');
+    }
+
+
 }

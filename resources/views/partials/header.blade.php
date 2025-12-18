@@ -276,6 +276,10 @@
                         </li>
 
                         <li class="scroll-to-section">
+                            <a href="{{ route('projects.index') }}" style="color: #1a1a1a; font-weight: 700;">Projects</a>
+                        </li>
+
+                        <li class="scroll-to-section">
                             <div class="main-red-button-hover">
                                 <a href="https://wa.me/94777674308" target="_blank">
                                     <i class="fab fa-whatsapp"></i> Schedule a Call
